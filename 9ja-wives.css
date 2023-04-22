@@ -205,6 +205,10 @@
     font-size: 22px;
     
 }
+
+.btn:hover {
+    background-image: linear-gradient(to bottom, rgb(0, 54, 0), green);
+}
 .button {
     position: relative;
     max-width: fit-content;
