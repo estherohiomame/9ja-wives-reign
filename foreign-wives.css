@@ -32,8 +32,13 @@ p {
 
 @media (max-width: 600px) {
 
+    #background-video {
+        display: none;
+    }
+
+
 body {
-    background-image: url('images/Texture\ For\ Background.png');
+    background-image: url('images/Texture-for-background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
