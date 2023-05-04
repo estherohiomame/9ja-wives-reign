@@ -80,7 +80,7 @@ body {
 }
 
 #hero .logo img {
-    width: 30vw;
+    width: 40vw;
     height: 30vw;
 }
 
@@ -116,9 +116,20 @@ body {
     position: relative;
     margin-bottom: 65px;
     height: 700px;
-    background-color: #fff596;
     border: none;
     outline: none;
+}
+
+#images-group::before {
+    content: '';
+    width: 100%;
+    height: 200px;
+    background-color: #fff596;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; 
 }
 
 .image {
@@ -163,6 +174,7 @@ body {
     top: 86%;
     left: 50%;
     transform: translate(-50%, -86%);
+    border: 3.5px solid #fff596;
 
 }
 
@@ -217,7 +229,7 @@ body {
     display: block;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     #hero {
      height: 80vh;   
     }
@@ -279,6 +291,10 @@ body {
     #image-2 img {
         width: 300px;
         height: 300px;   
+    }
+
+    #image-3 {
+        border: 3.5px solid #000000;
     }
 
     .cnt-img {
