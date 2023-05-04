@@ -283,6 +283,10 @@ body {
         background-color: #fff596;
         padding-bottom: 30px;
     }
+
+    #images-group::before {
+        display: none;
+    }
     
     .image {
         width: 300px;
