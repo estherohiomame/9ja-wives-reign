@@ -66,17 +66,14 @@ body {
 
 #hero h1 {
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -80%);
     font-size: 70px;
     background-color: #fff596;
     width: 100%;
     text-align: center;
-    line-height: 90px;
-    height: auto;
-    vertical-align: middle;
-    padding-top: 30px;
+
 }
 
 #hero .logo img {
@@ -213,6 +210,9 @@ body {
     z-index: -1;
 
 }
+.country:last-of-type {
+    position: relative;
+}
 
 .country button {
     color: black;
@@ -227,7 +227,31 @@ body {
     border: 0;
     margin: 20px auto;
     display: block;
+    position: relative;
+
 }
+
+  
+  /* Tooltip text */
+   .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff596;
+    text-align: center;
+    padding: 9px 5px;
+    border-radius: 6px;
+    top: 10%;
+    left: 65%;
+    transform: translateX(-65%, -10%);
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .country:hover .tooltiptext {
+    visibility: visible;
+  }
 
 @media (max-width: 850px) {
     #hero {
