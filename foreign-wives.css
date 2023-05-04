@@ -54,31 +54,31 @@ body {
 
 #hero .logo {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -15%);
 
     padding: 30px;
-    background-color: rgba(73, 73, 73, 0.178);
+    background-color: rgba(0, 0, 0, 0.647);
     border-radius: 16px;
 
 }
 
 #hero h1 {
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -90%);
     font-size: 70px;
     background-color: #fff596;
     width: 100%;
     text-align: center;
-
+    border: 3px solid silver;
 }
 
 #hero .logo img {
-    width: 40vw;
-    height: 30vw;
+    width: 48vw;
+    height: 38vw;
 }
 
 #mission {
@@ -258,6 +258,12 @@ body {
      height: 80vh;   
     }
 
+    #hero .logo {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+    }
     #hero .logo img {
         width: 60vw;
         height: 60vw;
