@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+        font-family: sans-serif;
+
+}
+
+
+#hero {
+       height: 80vh;
+       width: 95%;
+    margin: 0 auto;
+}
+
+.hero::after {
+    content: '';
+    width: 90%;
+    height: 100%;
+    background-color: #fff596;
+    z-index: -2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.hero {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+#intro {
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.intro .big {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 90px;
+    color: rgb(0, 57, 0);
+}
+
+.small {
+    font-size: 40px;
+    font-weight:800;
+    text-transform: uppercase;
+
+
+}
+
+.small span {
+    background-color: rgb(0, 143, 67);
+    color: white;
+}
+
+#intro img {
+    width: 40vw;
+    height: 30vw;
+}
+
+hr.heading {
+    height: 2px;
+    background-color: #eadf78;
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#signup {
+    padding: 20px;
+    width: 100%;
+}
+
+#signup .form {
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+#signup input[type=tel], #signup input[type=email], #signup input[type=text] {
+padding: 13px;
+width: 80vw;
+outline: none;
+border: none;
+background: #7e7e7e66;
+transition: 0.8s;
+}
+
+
+#signup input:focus {
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.info {
+    margin-top: 30px;
+    position: relative;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateY(-17px)
+}
+
+.header {
+    background: rgb(0, 179, 63);
+    border-top-right-radius: 10px;
+    padding: 7px 15px;
+    margin-left: 55px;
+    color: white;
+    font-weight: 950;
+    text-transform: uppercase;
+}
+
+.info p {
+    font-weight: bold;
+}
+
+.info div {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.info ul, .info ol {
+    margin: 15px 0px 30px 30px;
+    font-weight: bold;
+}
+
+.info li {
+    margin-bottom: 10px;
+}
+
+input[type=button] {
+    margin: 10px auto;
+    width: 60vw;
+    height: 40px;
+    color: #fff596;
+    background-color: rgb(0, 56, 0);
+    outline: none;
+border: none;
+border-radius: 40px;
+display: block;
+font-weight: 700;
+font-size: 20px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: 530;
+    padding: 30px 0px;
+}
+
+@media (max-width: 600px) {
+    #hero {
+        height: 40vh;
+        width: 95%;
+     margin: 0 auto;
+ }
+ #intro {
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.intro .big {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 45px;
+    color: rgb(0, 57, 0);
+}
+
+.small {
+    font-size: 22px;
+    font-weight:600;
+    text-transform: uppercase;
+
+
+}
+
+.small span {
+    background-color: rgb(0, 143, 67);
+    color: white;
+}
+
+#intro img {
+    width: 40vw;
+    height: 30vw;
+}
+}
