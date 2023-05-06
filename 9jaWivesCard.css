@@ -175,6 +175,10 @@ font-weight: 700;
 font-size: 20px;
 }
 
+input[type=button]:focus {
+    color: black;
+}
+
 footer p{
     text-align: center;
     font-weight: 530;

@@ -53,7 +53,7 @@
                 </ul>
                 <p>Please Choose your delivery option.</p>
                 <input type="button" name="NGDel" value="Nigerian Delivery">
-                <input type="button" name="GHDel" value="Ghanian Delivery">
+                <input type="button" name="USDel" value="USA Delivery">
             </div>
             <div id="cart" class="info">
                 <div>
@@ -131,5 +131,38 @@
             <p>
                 <i>If you have any questions or concerns, please send an email to customercare@9jawivesreign.com.</i></p>
         </footer>
+        <script>
+            let nwc = 800;
+            let delivery = "Select a delivery option!";
+            const taxes = 0.6 / 100;
+            let buttons = document.querySelectorAll('input[type=button]');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let WifeCard = document.querySelector('#WifeCard');
+    WifeCard.value = nwc;
+
+    if (button.value === "USA Delivery") {
+      delivery = 125;
+      let deliveryAmount = document.querySelector('input[name=delivery]');
+      deliveryAmount.value = delivery;
+    } else if (button.value === "Nigerian Delivery") {
+      delivery = 15;
+      let deliveryAmount = document.querySelector('input[name=delivery]');
+      deliveryAmount.value = delivery;
+    } else {
+      delivery = "Select a delivery option!";
+    }
+
+    let subtotal = (nwc + delivery) * taxes;
+    let vat = document.querySelector('#vat_taxes');
+    vat.value = taxes;
+    let total = (nwc + delivery) + subtotal;
+    let totalAmount = document.querySelector('#Total');
+    totalAmount.value = total;
+  });
+});
+        </script>
+        
     </body>
     </html>
