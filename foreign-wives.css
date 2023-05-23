@@ -427,15 +427,17 @@ body {
   /* Tooltip text */
    .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 30vw;
+    height: 20vw;
     background-color: black;
     color: #fff596;
     text-align: center;
     padding: 9px 5px;
     border-radius: 6px;
     top: 10%;
-    left: 65%;
-    transform: translateX(-65%, -10%);
+    left: 50%;
+    font-size: 30px;
+    transform: translateX(-50%, -10%);
     position: absolute;
     z-index: 1;
   }
