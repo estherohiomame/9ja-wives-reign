@@ -25,11 +25,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+/* 
 #hero .logo img {
-    width: 80%;
-    height: 80%;
-}
+    width: 50%;
+    height: 50%;
+} */
 
 #hero h1 {
     position: absolute;
@@ -131,8 +131,8 @@
     }
     
     #hero .logo img {
-        height: 500px;
-        width: 500px;
+        height: 100%;
+        width: 100%;
     }
     
     #hero .logo {
