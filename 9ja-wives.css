@@ -152,10 +152,15 @@ margin: 70px;
     .splide__slide {
         display: flex;
         align-items: center;
+        width: 100%;
     }
+
+    .gallery {
+        margin: 50px 20px;
+        }
     
     .gallery img {
-        height: 80vh;
+        height: 60vh;
         width: 90vw;
         padding-bottom: 27px;
         margin: 0 auto;
