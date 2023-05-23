@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Montserrat:wght@100;200;400;700;800&amp;display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+   
+}
+
+body{
+
+    background-image: linear-gradient(to right, rgba(14, 14, 0, 0.8) 100%,transparent),
+    url("./images/couple8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-origin: border-box ;
+    background-position: top;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.logo-div{
+    width: 200px;
+
+}
+.logo-div img{
+    width: 100%;
+}
+.form-div{
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 400px;
+    
+}
+.input-div{
+   width: 100%;
+
+}
+input{
+    display: block;
+    background-color: none;
+    border: none;
+    border-bottom: 2px solid rgba(224, 160, 20, 0.6);
+    border-radius: 10px;
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+input:hover,
+input:active,
+input:focus{
+    outline: none;
+    border-bottom: 3px solid rgb(212, 182, 10);
+    
+}
+input::placeholder{
+    font-size: 2em;
+}
+select{
+    width: 95%;
+    background: none;
+    border: 2px solid rgba(224, 160, 20, 0.6);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+}
+select:hover,
+select:active,
+select:focus{
+    outline: none;
+    border: 3px solid rgb(212, 182, 10);
+}
+label{
+    margin: 10px;
+}
+
+.btn-div{
+    text-align: center;
+}
+
+ .btn{
+    text-transform: uppercase;
+    
+    padding: 20px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+    cursor: pointer;
+
+ }
+ .btn:hover{
+    transform: translatey(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    background-color:  rgba(250, 224, 165, 0.6);
+ }
+ .btn:active{
+    transform: translatey(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+ }
+ .btn::after{
+    content:"";
+    display: inline-block;
+    height: 100%;
+    width: 95%;
+    border-radius: 100px;
+    position:absolute ;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+ }
+ .btn:hover::after{
+    transform: scalex(1.4) scaleY(1.6);
+    opacity: 0;
+ } 
+
+
+
+ .white_btn{
+    background-color: white;
+    color: #777;
+    color: gold;
+ }
+ .white_btn::after{
+    background-color:  rgba(224, 160, 20, 0.6);
+ }
+
+.checkbox{
+    display: inline-block;
+    width: auto;
+    background-color: rgb(212, 182, 10);
+}
+.checkbox:focus{
+    background-color: rgb(212, 182, 10);
+    outline: none;
+
+}
+a{
+    color: rgb(212, 182, 10);
+}
+@media (max-width: 40rem) {
+    .form-div{
+        width: 95%;
+    }
+    
+}

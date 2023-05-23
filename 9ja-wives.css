@@ -12,24 +12,26 @@
 
 }
 
-
-
 #hero > img {
-    height: 100%;
     width: 100%;
+    height: 100%;
+}
+
+
+
+#hero .logo img {
+    height: 30vw;
+    width: 30vw;
 }
 
 #hero .logo {
     position: absolute;
-    top: 50%;
+    top: 12%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -12%);
+    width: fit-content;
+    height: fit-content;
 }
-/* 
-#hero .logo img {
-    width: 50%;
-    height: 50%;
-} */
 
 #hero h1 {
     position: absolute;
@@ -42,35 +44,29 @@
     font-family: 'Great Vibes', serif;
 }
 
-#gallery {
-    margin: 40px;
+.gallery {
+margin: 70px;
+}
+
+.splide__slide {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    align-self: center;
+    width: 70%;
 }
 
-#gallery img {
-    height: 300px;
-    width: 300px;
+.splide__pagination li[role=presentation] button {
+    background-color: black;
+    margin: 5px;
+    transform: translateY(5px);
+}
+
+.gallery img {
+    height: 80vh;
+    width: 50vw;
     padding-bottom: 27px;
-    padding-left: 30px;
-
+    margin: 0 auto;
 }
-
-.right {
-    display: flex;
-    flex-direction: row;
-}
-/*  
-.left img:first-of-type {
-    border-top-left-radius: 40px;
-
-}
-
-.right img:last-of-type {
-    border-bottom-right-radius: 40px;
-} */
 
 #button {
     display: flex;
@@ -103,7 +99,7 @@
 
 .ibg {
     height: 50px;
-    width: 45px;
+    width: 50px;
     border-radius: 100%;
     background-color: white;
     position: absolute;
@@ -147,27 +143,23 @@
         top: 95%;
         left: 50%;
         transform: translate(-50%, -95%);
-        font-size: 70px;
+        font-size: clamp(40px, 17vw, 60px);
         color: rgb(0, 48, 0);
         font-weight: 200;
         font-family: 'Great Vibes', serif;
     }
 
-#gallery {
-    margin: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#gallery img {
-    height: 300px;
-    width: 300px;
-    padding-bottom: 27px;
-    padding-left: 0px;
-
-}
+    .splide__slide {
+        display: flex;
+        align-items: center;
+    }
+    
+    .gallery img {
+        height: 80vh;
+        width: 90vw;
+        padding-bottom: 27px;
+        margin: 0 auto;
+    }
 
 .right {
     display: flex;
@@ -210,6 +202,7 @@
     font-size: 22px;
     
 }
+
 
 .btn:hover {
     background-image: linear-gradient(to bottom, rgb(0, 54, 0), green);

@@ -4,7 +4,19 @@
         <title>9ja Wives Reign</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="
+        https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+        " rel="stylesheet">
+        <script src="
+        https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+        "></script>
         <link href="9ja-wives.css" rel="stylesheet">
+        <script>
+            document.addEventListener( 'DOMContentLoaded', function() {
+              var splide = new Splide( '.splide' );
+              splide.mount();
+            } );
+          </script>
     </head>
     <body>
 
@@ -16,13 +28,23 @@
         </div>
         <h1>Welcome</h1>
     </section>
-    <section id="gallery">
-            <div class="left">
-        <img src="images/couple1.jpg" alt="">
-        <img src="images/couple4.jpg" alt="">
-        <img src="images/couple6.jpg" alt="">
-        <img src="images/couple7.jpg" alt="">
-        <img src="images/couple8.jpg" alt=""></div>
+
+    <section class="splide gallery" aria-label="Splide Basic HTML Example">
+        <div class="splide__track left">
+              <ul class="splide__list">
+                  <li class="splide__slide"><img src="images/couple1.jpg" alt=""></li>
+                  <li class="splide__slide"><img src="images/couple4.jpg" alt=""></li>
+                  <li class="splide__slide"><img src="images/couple6.jpg" alt=""></li>
+                  <li class="splide__slide"><img src="images/couple7.jpg" alt=""></li>
+                  <li class="splide__slide">  <img src="images/couple8.jpg" alt=""></div></li>
+              </ul>
+        </div>
+      </section>
+
+ 
+
+        
+      
     </section>
     <section id="button">
         <div class="button" onclick="window.location.href='9jaWivesCard.html'">
@@ -43,5 +65,7 @@
     </section>
 
     <footer><i><b>Copyright 9ja Wives Reign &copy; 2023</b></i></footer>
+    
+
     </body>
 </html>
