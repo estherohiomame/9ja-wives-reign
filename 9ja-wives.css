@@ -26,10 +26,10 @@
     transform: translate(-50%, -50%);
 }
 
-/* #hero .logo img {
+#hero .logo img {
     width: 80%;
     height: 80%;
-} */
+}
 
 #hero h1 {
     position: absolute;
