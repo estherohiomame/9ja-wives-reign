@@ -425,10 +425,10 @@ body {
 
   
   /* Tooltip text */
-   .tooltiptext {
+  .tooltiptext {
     visibility: hidden;
-    width: 30vw;
-    height: 20vw;
+    width: auto;
+    height: auto;
     background-color: black;
     color: #fff596;
     text-align: center;
@@ -441,6 +441,7 @@ body {
     position: absolute;
     z-index: 1;
   }
+
   
   /* Show the tooltip text when you mouse over the tooltip container */
   .country:hover .tooltiptext {
@@ -542,4 +543,22 @@ body {
         height: 40vh;
     }
 
+    .tooltiptext {
+        visibility: hidden;
+        width: auto;
+        height: auto;
+        background-color: black;
+        color: #fff596;
+        text-align: center;
+        padding: 9px 5px;
+        border-radius: 6px;
+        top: 10%;
+        left: 50%;
+        font-size: 30px;
+        transform: translateX(-50%, -10%);
+        position: absolute;
+        z-index: 1;
+      }
+
+   
 }
