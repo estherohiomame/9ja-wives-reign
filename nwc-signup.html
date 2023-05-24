@@ -34,5 +34,12 @@
 <input type="submit" value="Sign Up">
 <div class="login"><span id="login">Already have an account?</span><button  onclick="window.location.href = 'nwc-login.html'">Login</button></div>
 </form>
+<script>
+    let button = document.querySelector("button");
+    button.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+</script>
+
 </body>
 </html>
