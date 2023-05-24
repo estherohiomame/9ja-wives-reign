@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: rgba(255, 166, 0, 0.384);
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.logo {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 20vw;
+    height: 20vw;
+}
+
+.register {
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    text-align: center;
+    background-color: rgba(253, 219, 209, 0.685);
+    padding: 40px 20px;
+    border-radius: 10%;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    position: fixed;
+    z-index: -10;
+}
+
+input:not(input[type=checkbox], input[type=submit]) {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+input[type=submit], button {
+    cursor: pointer;
+}
+
+input[type=submit] {
+    padding: 17px 30px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    color: #30b145;
+    margin: 0 auto;
+}
+
+label {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+
+[for=acceptTerms] {
+    display: inline;
+    padding-left: 10px;
+}
+
+p, a {
+    text-align: center;
+    padding: 10px 0px;
+    display: block;
+}
+
+.accept {
+text-align: center;
+accent-color: darkgreen;
+margin: 30px auto;
+}
+
+@media (max-width: 700px) {
+    .logo {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo img {
+    
+        width: 50vw;
+        height: 50vw;
+    }
+       
+}
+
+.login {
+    text-align: center;
+    width: 60%;
+    margin: 40px auto;
+    background-color: rgba(150, 148, 148, 0.562);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.login button {
+    margin-left: 10px; 
+    background-color: #30b145;
+    color: white;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 90px
+}

@@ -78,7 +78,7 @@ button{
    <div class="container">
         <form action="check.php" method="post" id="myForm">
             <div class="input-div">
-                <p>We sent u a verification code pls check you email and copy code to verify account</p>
+                <p>We sent you a verification code. Please check you email and copy code to verify account.</p>
                 <label for="name">Enter code</label>
                 <input type="number" name="token" required id="myInput">
                 <input type="hidden" name="email" value="<?=$email;?>">
