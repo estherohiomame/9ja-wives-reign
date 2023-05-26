@@ -88,49 +88,50 @@
                         <p>Please Choose your delivery option.</p>
                         <input type="button" name="NGDel" value="Nigerian Delivery">
                         <input type="button" name="USDel" value="USA Delivery">
-                        <div class="form">
+                        <div id="documents" class="info">
+                            <p>Please Upload the following Documents:</p>
+                            <ol>
+                                <li>
+                                    Applicant's Passport Data Page (husband's) <br>
+                                    <input type="file" name="HusbandData" accept="image/*, .pdf" capture="environment">
+                                </li>
+                                <li>
+                                    Applicant's Passport Data Page (wife's) <br>
+                                    <input type="file" name="WifeData" accept="image/*, .pdf" capture="environment">
+                                </li>
+                                <li>
+                                    Marriage certificate <br>
+                                    <input type="file" name="MarriageCert" accept="image/*, .pdf" capture="environment">
+                                </li>
+                                <li>
+                                    Receipt from USA showing wife changed last name to married name (ONLY if she's changed her name already, otherwise NWC will match the name on her passport). <br>
+                                    <input type="file" name="WifeNameProof" accept="image/*, .pdf" capture="environment">
+                                </li>
+                                <li>
+                                    Wife's last visa page (even if it's expired) <br>
+                                    <input type="file" name="WifeLastVisa" accept="image/*, .pdf" capture="environment">
+                                </li>
+                                <li>
+                                    Wedding pictures taken by both partners at the registry during vows/signing certificate and in front of the Registry Sign.<br>
+                                    <input type="file" name="WeddingPictures" accept="image/*" capture="environment" multiple>
+                                </li>
+                                <li>
+                                    Clear passport photograph of the wife with white background: <br>
+                                    <input type="file" name="HusbandData" accept="image/*" capture="environment">
+                                </li>
+                            </ol>
+                            </div>
+                    <div class="form">
                     <label for="WifeCard">Naija Wife Card</label>
-                    <input type="text" name="WifeCard" id="WifeCard"><br><br>
+                    <input type="text" name="WifeCard" id="WifeCard" readonly><br><br>
                     <label for="delivery">Delivery</label>
-                    <input type="text" name="delivery" id="delivery"><br><br>
+                    <input type="text" name="delivery" id="delivery" readonly><br><br>
                     <label for="vat_taxes">VAT/Taxes 0.6%</label>
-                    <input type="text" name="vat_taxes" id="vat_taxes"><br><br>
+                    <input type="text" name="vat_taxes" id="vat_taxes" readonly><br><br>
                     <label for="Total">Total</label>
-                    <input type="text" name="Total" id="Total"><br><br>
+                    <input type="text" name="Total" id="Total" readonly><br><br>
                 </div></div>
-                <div id="documents" class="info">
-                    <p>Please Upload the following Documents:</p>
-                    <ol>
-                        <li>
-                            Applicant's Passport Data Page (husband's) <br>
-                            <input type="file" name="HusbandData" accept="image/*, .pdf" capture="environment">
-                        </li>
-                        <li>
-                            Applicant's Passport Data Page (wife's) <br>
-                            <input type="file" name="WifeData" accept="image/*, .pdf" capture="environment">
-                        </li>
-                        <li>
-                            Marriage certificate <br>
-                            <input type="file" name="MarriageCert" accept="image/*, .pdf" capture="environment">
-                        </li>
-                        <li>
-                            Receipt from USA showing wife changed last name to married name (ONLY if she's changed her name already, otherwise NWC will match the name on her passport). <br>
-                            <input type="file" name="WifeNameProof" accept="image/*, .pdf" capture="environment">
-                        </li>
-                        <li>
-                            Wife's last visa page (even if it's expired) <br>
-                            <input type="file" name="WifeLastVisa" accept="image/*, .pdf" capture="environment">
-                        </li>
-                        <li>
-                            Wedding pictures taken by both partners at the registry during vows/signing certificate and in front of the Registry Sign.<br>
-                            <input type="file" name="WeddingPictures" accept="image/*" capture="environment" multiple>
-                        </li>
-                        <li>
-                            Clear passport photograph of the wife with white background: <br>
-                            <input type="file" name="HusbandData" accept="image/*" capture="environment">
-                        </li>
-                    </ol>
-                    </div>
+
         </form>
         <hr class="heading">
         <footer>
@@ -179,6 +180,44 @@ dropdownTriggers.forEach((trigger) => {
     dropdown.classList.toggle('down');
   });
 });
+
+const cartInputs = document.querySelectorAll('#cart input');
+
+cartInputs.forEach((input) => {
+
+    input.removeAttribute('readonly');
+
+    buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let WifeCard = document.querySelector('#WifeCard');
+    WifeCard.value = nwc;
+
+    if (button.value === "USA Delivery") {
+      delivery = 125;
+      let deliveryAmount = document.querySelector('input[name=delivery]');
+      deliveryAmount.value = delivery;
+    } else if (button.value === "Nigerian Delivery") {
+      delivery = 15;
+      let deliveryAmount = document.querySelector('input[name=delivery]');
+      deliveryAmount.value = delivery;
+    } else {
+      delivery = "Select a delivery option!";
+    }
+
+    let subtotal = (nwc + delivery) * taxes;
+    let vat = document.querySelector('#vat_taxes');
+    vat.value = taxes;
+    let total = (nwc + delivery) + subtotal;
+    let totalAmount = document.querySelector('#Total');
+    totalAmount.value = total;
+  });
+});
+    input.setAttribute('readonly', 'readonly');
+})
+
+
+
+
 
         </script>
         

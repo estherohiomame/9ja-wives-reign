@@ -86,7 +86,7 @@ hr.heading {
     background-color: #eadf78;
     border: none;
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #signup {
@@ -233,7 +233,6 @@ footer p{
     max-height: 100%;
 }
 .drop {
-    position: static;
     transition: max-height 2s ease-in-out;
     overflow: hidden;
     max-height: 0px;
@@ -246,7 +245,7 @@ footer p{
     }
 
     50% {
-        max-width: 40%;
+        max-height: 40%;
     }
 
     100% {
