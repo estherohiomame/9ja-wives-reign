@@ -190,8 +190,40 @@ margin-top: 20px;
 .navbtn:hover {
 background-color: #fff176;
 color: white;
-
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 5px;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.dropdown-content.show {
+  max-height: 500px; /* Adjust the height as needed */
+}
+
+
+.show {
+  display: block;
+}
+
 </style>
 
 <div class="navbar fixed">
@@ -210,6 +242,15 @@ color: white;
       <button type="button" class="navbtn" onclick="window.location.href='/#findus'">Contact Us</button>
     </ul>
   </nav>
+  <div class="dropdown">
+    <button class="dropdown-toggle">Click to toggle</button>
+    <div class="dropdown-content">
+      <p>Dropdown content goes here</p>
+      <p>Another option</p>
+      <p>Yet another option</p>
+    </div>
+  </div>
+  
   <script>
       document.querySelector('.icon-one').addEventListener("click", function() {
   document.querySelector('.icon-one').classList.toggle('active-one');
@@ -220,5 +261,12 @@ var menu = document.querySelector('.hamburger-menu');
 navbar.classList.toggle('show');
 menu.classList.toggle('open');
       } 
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropdownToggle.addEventListener('click', () => {
+  dropdownContent.classList.toggle('show');
+});
+
   </script>
 </div>

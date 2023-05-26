@@ -45,86 +45,92 @@
             <hr class="heading">
             <div id="delivery" class="info">
                 <div>
-                <img class="icon" src="images\Contactless Delivery.png"><span class="header">DELIVERY</span></div>
+                <img class="icon" src="images\Contactless Delivery.png"><span class="header" onclick="dropdownToggle()">DELIVERY</span></div>
+                <div class="dropdown drop">
                 <p>Once your card is available we will contact you to make arrangements for delivery.</p>
                 <ul>
                     <li>If you want your card delivered anywhere within Nigeria, then it's $15</li>
                     <li>If you want your card delivered to you in the USA, then it's $125. </li>
-                </ul>
-                <p>Please Choose your delivery option.</p>
-                <input type="button" name="NGDel" value="Nigerian Delivery">
-                <input type="button" name="USDel" value="USA Delivery">
+                </ul></div>
             </div>
-            <div id="cart" class="info">
-                <div>
-                    <img class="icon" src="images\Delivery Handcart.png"><span class="header">CART</span></div>
-                    <div class="form">
-                <label for="WifeCard">Naija Wife Card</label>
-                <input type="text" name="WifeCard" id="WifeCard"><br><br>
-                <label for="delivery">Delivery</label>
-                <input type="text" name="delivery" id="delivery"><br><br>
-                <label for="vat_taxes">VAT/Taxes 0.6%</label>
-                <input type="text" name="vat_taxes" id="vat_taxes"><br><br>
-                <label for="Total">Total</label>
-                <input type="text" name="Total" id="Total"><br><br>
-            </div></div>
-            <hr class="heading">
-            <div id="documents" class="info">
-                <p>Please Upload the following Documents:</p>
-                <ol>
-                    <li>
-                        Applicant's Passport Data Page (husband's) <br>
-                        <input type="file" name="HusbandData" accept="image/*, .pdf" capture="environment">
-                    </li>
-                    <li>
-                        Applicant's Passport Data Page (wife's) <br>
-                        <input type="file" name="WifeData" accept="image/*, .pdf" capture="environment">
-                    </li>
-                    <li>
-                        Marriage certificate <br>
-                        <input type="file" name="MarriageCert" accept="image/*, .pdf" capture="environment">
-                    </li>
-                    <li>
-                        Receipt from USA showing wife changed last name to married name (ONLY if she's changed her name already, otherwise NWC will match the name on her passport). <br>
-                        <input type="file" name="WifeNameProof" accept="image/*, .pdf" capture="environment">
-                    </li>
-                    <li>
-                        Wife's last visa page (even if it's expired) <br>
-                        <input type="file" name="WifeLastVisa" accept="image/*, .pdf" capture="environment">
-                    </li>
-                    <li>
-                        Wedding pictures taken by both partners at the registry during vows/signing certificate and in front of the Registry Sign.<br>
-                        <input type="file" name="WeddingPictures" accept="image/*" capture="environment" multiple>
-                    </li>
-                    <li>
-                        Clear passport photograph of the wife with white background: <br>
-                        <input type="file" name="HusbandData" accept="image/*" capture="environment">
-                    </li>
-                </ol>
-                </div>
-                <hr class="heading">
-                <div id="payment" class="info">
+            
+            </div>
+                    <div id="payment" class="info">
                     <div>
                         <img class="icon" src="images\Pay.png"><span class="header">PAYMENT OPTIONS</span>
                     </div>
+                    <div class="dropdown drop">
                     <ul>
                         <li>NWC is $800. You can pay in full or make instalmental payments.</li>
                         <li>If choosing to make deposit at this time to secure price, then minimum deposit is $100 and total is $850. Card will not be processed until final payment is received.</li>
-                    </ul>
+                    </ul></div>
                 </div>
                 <div id="refund" class="info">
                     <div>
                         <img class="icon" src="images\Policy Document.png"><span class="header">REFUND POLICY</span>
                     </div>
+                    <div class="dropdown drop">
                     <p>Deposit is non-refundable.</p>
                     <p>Balance is refundable if requested within 7 days of the initial payment and the processing of the NWC has not begun.</p>
-                </div>
+                </div></div>
                 <div id="processing" class="info">
                     <div>
                         <img class="icon" src="images\Policy Document.png"><span class="header">PROCESSING</span>
                     </div>
+                    <div class="dropdown drop">
                     <p>It usually takes approximately 2-4 weeks to receive the NWC if you already have the STR Visa. However, if you don't have your STR (most wives do not), then it'll take approximately 2-3 months because they'll take care of that for you.</p>
                 </div>
+</div>
+<hr class="heading">
+                <div id="cart" class="info">
+                    <div>
+                        <img class="icon" src="images\Delivery Handcart.png"><span class="header">CART</span></div>
+                        <p>Please Choose your delivery option.</p>
+                        <input type="button" name="NGDel" value="Nigerian Delivery">
+                        <input type="button" name="USDel" value="USA Delivery">
+                        <div class="form">
+                    <label for="WifeCard">Naija Wife Card</label>
+                    <input type="text" name="WifeCard" id="WifeCard"><br><br>
+                    <label for="delivery">Delivery</label>
+                    <input type="text" name="delivery" id="delivery"><br><br>
+                    <label for="vat_taxes">VAT/Taxes 0.6%</label>
+                    <input type="text" name="vat_taxes" id="vat_taxes"><br><br>
+                    <label for="Total">Total</label>
+                    <input type="text" name="Total" id="Total"><br><br>
+                </div></div>
+                <div id="documents" class="info">
+                    <p>Please Upload the following Documents:</p>
+                    <ol>
+                        <li>
+                            Applicant's Passport Data Page (husband's) <br>
+                            <input type="file" name="HusbandData" accept="image/*, .pdf" capture="environment">
+                        </li>
+                        <li>
+                            Applicant's Passport Data Page (wife's) <br>
+                            <input type="file" name="WifeData" accept="image/*, .pdf" capture="environment">
+                        </li>
+                        <li>
+                            Marriage certificate <br>
+                            <input type="file" name="MarriageCert" accept="image/*, .pdf" capture="environment">
+                        </li>
+                        <li>
+                            Receipt from USA showing wife changed last name to married name (ONLY if she's changed her name already, otherwise NWC will match the name on her passport). <br>
+                            <input type="file" name="WifeNameProof" accept="image/*, .pdf" capture="environment">
+                        </li>
+                        <li>
+                            Wife's last visa page (even if it's expired) <br>
+                            <input type="file" name="WifeLastVisa" accept="image/*, .pdf" capture="environment">
+                        </li>
+                        <li>
+                            Wedding pictures taken by both partners at the registry during vows/signing certificate and in front of the Registry Sign.<br>
+                            <input type="file" name="WeddingPictures" accept="image/*" capture="environment" multiple>
+                        </li>
+                        <li>
+                            Clear passport photograph of the wife with white background: <br>
+                            <input type="file" name="HusbandData" accept="image/*" capture="environment">
+                        </li>
+                    </ol>
+                    </div>
         </form>
         <hr class="heading">
         <footer>
@@ -162,6 +168,18 @@ buttons.forEach((button) => {
     totalAmount.value = total;
   });
 });
+
+const dropdownTriggers = document.querySelectorAll('.info');
+
+dropdownTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const dropdown = trigger.querySelector('.dropdown');
+
+    dropdown.classList.toggle('drop');
+    dropdown.classList.toggle('down');
+  });
+});
+
         </script>
         
     </body>
