@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.hero {
+height: 40vh;
+background: url(images/airport_man.png);
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+text-align: center;
+width: 100%;
+display: flex;
+}
+
+
+.header {
+width: 80%;
+margin: auto;
+color: white;
+font-size: 40px;
+text-shadow: 6px -2px 2px #36373562;
+}
+
+
+.welcome {
+    text-align: center;
+    font-weight: 700;
+    width: 90%;
+    border: 2px solid #fff;
+    margin: 40px auto;
+}
+
+label:not(input[type=checkbox] ~ label) {
+    display: block;
+    padding-bottom: 5px;
+}
+
+#signup {
+    padding: 20px;
+    width: 100%;
+}
+
+ .form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.form input:not(input[type=checkbox]) {
+    padding: 13px;
+    width: 80vw;
+    outline: none;
+    border: none;
+    background: #7e7e7e66;
+    transition: 0.8s;
+    }
+    
+    
+    .form input:focus {
+        background: transparent;
+        border-bottom: 1px solid black;
+    }
+
+h2 {
+    margin-bottom: 30px;
+}
