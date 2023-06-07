@@ -14,7 +14,9 @@
         </div>
     </section>
     <section class="welcome">
+        <hr>
         <p>Thank you for the opportunity to allow us to make your visit to Nigeria as stress free as possible. Our Airport Escort will greet you once you arrive and guide you through the entire Immigration Process as quickly as possible. You can have one loved one meet you right outside of the Security Door. To customize your experience please select your preferences below.</p>
+        <hr>
     </section>
     <form action="" id="form">
         <div class="form">
@@ -51,8 +53,65 @@
             <p>Would you like to have a security officer to escort you for the day?</p>
             <input type="checkbox" name="NoOfficer" id="NoOfficer">
             <label for="NoOfficer">No</label><br><br>
-            <input type="checkbox" name="YesOfficer" id="YesOfficer"><br><br>
-            <label for="YesOfficer">Yes</label>
+            <input type="checkbox" name="YesOfficer" id="YesOfficer">
+            <label for="YesOfficer">Yes</label><br><br>
+            <div class="officerType">
+                <input type="checkbox" name="PrivateOfficer" id="PrivateOfficer">
+                <label for="">Private Officer  $50 daily</label><br><br>
+                <input type="checkbox" name="PublicOfficer" id="PublicOfficer">
+                <label for="PublicOfficer">Police Officer   $70 daily</label><br><br>
+                <input type="checkbox" name="VisiblyArmed" id="VisiblyArmed">
+                <label for="VisiblyArmed">Visibly Armed $50 daily surcharge (in addition to above Officer Charge)</label><br><br>
+            </div></div>
+            <div class="form">
+                <h2>T-Shirt</h2>
+                <p>Queen Tshirt $25</p>
+                <input type="checkbox" name="QueenSize" id="small" value="small">
+                <label for="small">S</label>
+                <input type="checkbox" name="QueenSize" id="medium" value="medium">
+                <label for="medium">M</label>
+                <input type="checkbox" name="QueenSize" id="large" value="large">
+                <label for="large">L</label>
+                <input type="checkbox" name="QueenSize" id="XLarge" value="XLarge">
+                <label for="XLarge">XL</label>
+                <input type="checkbox" name="QueenSize" id="2XLarge" value="2XLarge">
+                <label for="2XLarge">1X</label>
+                <input type="checkbox" name="QueenSize" id="3XLarge" value="3XLarge">
+                <label for="3XLarge">2X</label>              
+         
+                <p>Matching King T-shirt $25</p>
+                <input type="checkbox" name="KingSize" id="small" value="small">
+                <label for="small">S</label>
+                <input type="checkbox" name="KingSize" id="medium" value="medium">
+                <label for="medium">M</label>
+                <input type="checkbox" name="KingSize" id="large" value="large">
+                <label for="large">L</label>
+                <input type="checkbox" name="KingSize" id="XLarge" value="XLarge">
+                <label for="XLarge">XL</label>
+                <input type="checkbox" name="KingSize" id="2XLarge" value="2XLarge">
+                <label for="2XLarge">1X</label>
+                <input type="checkbox" name="KingSize" id="3XLarge" value="3XLarge">
+                <label for="3XLarge">2X</label>
+              </div>              
+        </div>
+        <div class="form">
+            <h2>Cart</h2>
+            <label for="EscortPrice">Escort Services</label>
+            <input type="text" name="EscortPrice" id="EscortPrice">
+            <label for="SecurityPrice">Security</label>
+            <input type="text" name="SecurityPrice" id="SecurityPrice">
+            <label for="TshirtPrice">T-Shirts</label>
+            <input type="text" name="TshirtPrice" id="TshirtPrice">
+            <label for="VatPrice">VAT/Taxes</label>
+            <input type="text" name="EscortPrice" id="EscortPrice" value="$10" readonly>
+            <label for="SubtotalPrice">Subtotal</label>
+            <input type="text" name="SubtotalPrice" id="SubtotalPrice">
+            <label for="DiscountCode">Discount Code</label>
+            <input type="text" name="DiscountCode" id="DiscountCode">
+            <label for="DiscountAmount" class="discount">Discount Amount</label>
+            <input type="text" name="DiscountAmount" class="discount" id="DiscountAmount">
+            <label for="TotalPrice">TOTAL</label>
+            <input type="text" name="TotalPrice" id="TotalPrice">
         </div>
     </form>
 

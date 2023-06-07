@@ -50,7 +50,7 @@ label:not(input[type=checkbox] ~ label) {
 
  .form {
     width: 80%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 
@@ -61,6 +61,7 @@ label:not(input[type=checkbox] ~ label) {
     border: none;
     background: #7e7e7e66;
     transition: 0.8s;
+    margin-bottom: 20px;
     }
     
     
@@ -69,6 +70,22 @@ label:not(input[type=checkbox] ~ label) {
         border-bottom: 1px solid black;
     }
 
-h2 {
+    
+h2:not(.hero h2) {
     margin-bottom: 30px;
+    color: #ef8002;
+}
+
+p {
+    text-align: center;
+}
+
+hr {
+    background-color: orange;
+    width: 90%;
+    height: 4px;
+    border-radius: 4px;
+    margin: 40px auto;
+    box-shadow: 0px 0px 10px #ffcf0dd6;
+    border: none;
 }
