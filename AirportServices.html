@@ -21,78 +21,97 @@
     <form action="" id="form">
         <div class="form">
             <label for="QueenName">Queen's Name:</label>
-            <input type="text" name="QueenName" id="QueenName"><br><br>
+            <input type="text" name="QueenName" oninput="validateForm()" id="QueenName">
+            <p class="error" id="nameVal">Please enter a name:</p>
+            <br><br>
+            
+
             <label for="QueenNum">Phone:</label>
-            <input type="tel" name="QueenNum" id="QueenNum"><br><br>
+            <input type="tel" name="QueenNum" oninput="validateForm()" id="QueenNum">
+            <p class="error" id="numVal">Please enter a valid number</p><br><br>
+
             <label for="QueenEmail">Email Address:</label>
-            <input type="email" name="QueenEmail" id="QueenEmail"><br><br>
+            <input type="email" name="QueenEmail" oninput="validateForm()" id="QueenEmail">
+            <p class="error" id="emailVal">Please enter a valid email</p><br><br>    
+
             <label for="dateOfArrival">Date of Arrival</label>
-            <input type="date" name="dateOfArrival" id="dateOfArrival"><br><br>
-            <label for="timeOfArrival">Time of Arrival</label>
-            <input type="time" name="timeOfArrival" id="timeOfArrival"><br><br>
+            <input type="date" name="dateOfArrival" oninput="validateForm()" id="dateOfArrival">
+            <p class="error" id="DOAVal">Enter a date of arrival</p><br><br>
+
+            <label for="timeOfArrival">Expected Time of Arrival</label>
+            <input type="time" name="timeOfArrival" oninput="validateForm()" id="timeOfArrival">
+            <p class="error" id="ETAVal">Enter a expected time of arrival</p><br><br>
+
             <label for="Airline">Airline</label>
-            <input type="text" name="Airline" id="Airline"><br><br>
+            <input type="text" name="Airline" oninput="validateForm()" id="Airline">
+            <p class="error" id="AirlineVal">What's your mode of transport?</p><br><br>
+
             <label for="DateOfDeparture">Date of Departure</label>
-            <input type="text" name="DateOfDeparture" id="DateOfDeparture"><br><br><br><br>
+            <input type="text" name="DateOfDeparture" oninput="validateForm()" id="DateOfDeparture">
+            <p class="error" id="DODVal">When will you be leaving?</p>
+            <br><br><br><br>
         </div>
         <div class="form">
             <h2>I need Escort Service For:</h2>
-            <input type="checkbox" name="travellingAlone" id="travellingAlone">
+            <div class="peopleTravelling">
+            <input type="checkbox" oninput="validateAndUnselect()" value="travellingAlone" name="peopleTravelling" id="travellingAlone">
             <label for="travellingAlone">Myself Only</label><br><br>
-            <input type="checkbox" name="travellingWithOthers" id="travellingWithOthers">
-            <label for="travellingWithOthers">Please indicate the number of passengers that will be joining you:</label><br><br>
-            <input type="checkbox" name="arrivalOnly" id="arrivalOnly">
+            <input type="checkbox" name="peopleTravelling" oninput="validateAndUnselect()" value="travellingWithOthers" id="travellingWithOthers">
+            <label for="travellingWithOthers">Please indicate the number of passengers that will be joining you: </label><br><br>
+        </div>
+            <input type="checkbox" name="transport" oninput="validateAndUnselect()" id="arrivalOnly" value="arrivalOnly">
             <label for="arrivalOnly">Arrival Only $150 per person</label><br><br>
-            <input type="checkbox" name="departureOnly" id="departureOnly">
+            <input type="checkbox" name="transport" oninput="validateAndUnselect()" value="departureOnly" id="departureOnly">
             <label for="departureOnly">Departure Only $150 per person</label><br><br>
-            <input type="checkbox" name="arrivalAndDeparture" id="arrivalAndDeparture">
+            <input type="checkbox" name="transport" oninput="validateAndUnselect()" value="arrivalAndDeparture" id="arrivalAndDeparture">
             <label for="arrivalAndDeparture">Both Arrival and Departure $275 per person</label><br><br>
         </div>
         <div class="form">
             <h2>SECURITY</h2>
             <p>Would you like to have a security officer to escort you for the day?</p>
-            <input type="checkbox" name="NoOfficer" id="NoOfficer">
+            <input type="checkbox" name="Officer" id="NoOfficer" value="NoOfficer">
             <label for="NoOfficer">No</label><br><br>
-            <input type="checkbox" name="YesOfficer" id="YesOfficer">
+            <input type="checkbox" name="Officer" id="YesOfficer" value="Officer">
             <label for="YesOfficer">Yes</label><br><br>
             <div class="officerType">
-                <input type="checkbox" name="PrivateOfficer" id="PrivateOfficer">
-                <label for="">Private Officer  $50 daily</label><br><br>
-                <input type="checkbox" name="PublicOfficer" id="PublicOfficer">
-                <label for="PublicOfficer">Police Officer   $70 daily</label><br><br>
-                <input type="checkbox" name="VisiblyArmed" id="VisiblyArmed">
-                <label for="VisiblyArmed">Visibly Armed $50 daily surcharge (in addition to above Officer Charge)</label><br><br>
+                <input type="checkbox" name="officerType" id="PrivateOfficer" onchange="validateCheckbox(this)" value="Private Officer">
+<label for="PrivateOfficer">Private Officer $50 daily</label><br><br>
+<input type="checkbox" name="officerType" id="PublicOfficer" onchange="validateCheckbox(this)" value="Police Officer">
+<label for="PublicOfficer">Police Officer $70 daily</label><br><br>
+<input type="checkbox" name="VisiblyArmed" id="VisiblyArmed" value="true">
+<label for="VisiblyArmed">Visibly Armed $50 daily surcharge (in addition to above Officer Charge)</label><br><br>
             </div></div>
-            <div class="form">
+            <div class="form" id="TShirts">
                 <h2>T-Shirt</h2>
                 <p>Queen Tshirt $25</p>
-                <input type="checkbox" name="QueenSize" id="small" value="small">
-                <label for="small">S</label>
-                <input type="checkbox" name="QueenSize" id="medium" value="medium">
-                <label for="medium">M</label>
-                <input type="checkbox" name="QueenSize" id="large" value="large">
-                <label for="large">L</label>
-                <input type="checkbox" name="QueenSize" id="XLarge" value="XLarge">
-                <label for="XLarge">XL</label>
-                <input type="checkbox" name="QueenSize" id="2XLarge" value="2XLarge">
-                <label for="2XLarge">1X</label>
-                <input type="checkbox" name="QueenSize" id="3XLarge" value="3XLarge">
-                <label for="3XLarge">2X</label>              
-         
+                <input type="checkbox" name="QueenSize" onchange="validateTshirtCheckbox('QueenSize', this)" id="queenSmall" value="small">
+                <label for="queenSmall">S</label>
+                <input type="checkbox" name="QueenSize" onchange="validateTshirtCheckbox('QueenSize', this)" id="queenMedium" value="medium">
+                <label for="queenMedium">M</label>
+                <input type="checkbox" name="QueenSize" onchange="validateTshirtCheckbox('QueenSize', this)" id="queenLarge" value="large">
+                <label for="queenLarge">L</label>
+                <input type="checkbox" name="QueenSize" onchange="validateTshirtCheckbox('QueenSize', this)" id="queenXLarge" value="XLarge">
+                <label for="queenXLarge">XL</label>
+                <input type="checkbox" name="QueenSize" onchange="validateTshirtCheckbox('QueenSize', this)" id="queen2XLarge" value="2XLarge">
+                <label for="queen2XLarge">1X</label>
+                <input type="checkbox" name="QueenSize" onchange="validateTshirtCheckbox('QueenSize', this)" id="queen3XLarge" value="3XLarge">
+                <label for="queen3XLarge">2X</label>
+              
                 <p>Matching King T-shirt $25</p>
-                <input type="checkbox" name="KingSize" id="small" value="small">
-                <label for="small">S</label>
-                <input type="checkbox" name="KingSize" id="medium" value="medium">
-                <label for="medium">M</label>
-                <input type="checkbox" name="KingSize" id="large" value="large">
-                <label for="large">L</label>
-                <input type="checkbox" name="KingSize" id="XLarge" value="XLarge">
-                <label for="XLarge">XL</label>
-                <input type="checkbox" name="KingSize" id="2XLarge" value="2XLarge">
-                <label for="2XLarge">1X</label>
-                <input type="checkbox" name="KingSize" id="3XLarge" value="3XLarge">
-                <label for="3XLarge">2X</label>
-              </div>              
+                <input type="checkbox" name="KingSize" onchange="validateTshirtCheckbox('KingSize', this)" id="kingSmall" value="small">
+                <label for="kingSmall">S</label>
+                <input type="checkbox" name="KingSize" onchange="validateTshirtCheckbox('KingSize', this)" id="kingMedium" value="medium">
+                <label for="kingMedium">M</label>
+                <input type="checkbox" name="KingSize" onchange="validateTshirtCheckbox('KingSize', this)" id="kingLarge" value="large">
+                <label for="kingLarge">L</label>
+                <input type="checkbox" name="KingSize" onchange="validateTshirtCheckbox('KingSize', this)" id="kingXLarge" value="XLarge">
+                <label for="kingXLarge">XL</label>
+                <input type="checkbox" name="KingSize" onchange="validateTshirtCheckbox('KingSize', this)" id="king2XLarge" value="2XLarge">
+                <label for="king2XLarge">1X</label>
+                <input type="checkbox" name="KingSize" onchange="validateTshirtCheckbox('KingSize', this)" id="king3XLarge" value="3XLarge">
+                <label for="king3XLarge">2X</label>
+              </div>
+                            
         </div>
         <div class="form">
             <h2>Cart</h2>
@@ -115,6 +134,214 @@
         </div>
         <button type="submit">Submit</button>
     </form>
+    <script>
+  function validateForm() {
+  const queenName = document.getElementById('QueenName');
+  const queenNum = document.getElementById('QueenNum');
+  const queenEmail = document.getElementById('QueenEmail');
+  const dateOfArrival = document.getElementById('dateOfArrival');
+  const timeOfArrival = document.getElementById('timeOfArrival');
+  const airline = document.getElementById('Airline');
+  const dateOfDeparture = document.getElementById('DateOfDeparture');
 
+  const nameVal = document.getElementById('nameVal');
+  const numVal = document.getElementById('numVal');
+  const emailVal = document.getElementById('emailVal');
+  const DOAVal = document.getElementById('DOAVal');
+  const ETAVal = document.getElementById('ETAVal');
+  const AirlineVal = document.getElementById('AirlineVal');
+  const DODVal = document.getElementById('DODVal');
+
+  // Validate Queen's Name
+  if (queenName.value.trim() === '') {
+    nameVal.style.display = 'block';
+  } else {
+    nameVal.style.display = 'none';
+  }
+
+  // Validate Phone Number
+  if (queenNum.value.trim() === '') {
+    numVal.style.display = 'block';
+  } else {
+    numVal.style.display = 'none';
+  }
+
+  // Validate Email Address
+  if (queenEmail.value.trim() === '') {
+    emailVal.style.display = 'block';
+  } else {
+    emailVal.style.display = 'none';
+  }
+
+  // Validate Date of Arrival
+  if (dateOfArrival.value.trim() === '') {
+    DOAVal.style.display = 'block';
+  } else {
+    DOAVal.style.display = 'none';
+  }
+
+  // Validate Expected Time of Arrival
+  if (timeOfArrival.value.trim() === '') {
+    ETAVal.style.display = 'block';
+  } else {
+    ETAVal.style.display = 'none';
+  }
+
+  // Validate Airline
+  if (airline.value.trim() === '') {
+    AirlineVal.style.display = 'block';
+  } else {
+    AirlineVal.style.display = 'none';
+  }
+
+  // Validate Date of Departure
+  if (dateOfDeparture.value.trim() === '') {
+    DODVal.style.display = 'block';
+  } else {
+    DODVal.style.display = 'none';
+  }
+}
+
+
+const travellingAlone = document.getElementById('travellingAlone');
+const travellingWithOthers = document.getElementById('travellingWithOthers');
+
+travellingAlone.addEventListener('change', function() {
+  if (travellingAlone.checked) {
+    travellingWithOthers.checked = false;
+  }
+});
+
+travellingWithOthers.addEventListener('change', function() {
+  if (travellingWithOthers.checked) {
+    travellingAlone.checked = false;
+  }
+});
+
+const arrivalOnly = document.getElementById('arrivalOnly');
+const departureOnly = document.getElementById('departureOnly');
+const arrivalAndDeparture = document.getElementById('arrivalAndDeparture');
+
+arrivalOnly.addEventListener('change', function() {
+  if (arrivalOnly.checked) {
+    departureOnly.checked = false;
+    arrivalAndDeparture.checked = false;
+  }
+});
+
+departureOnly.addEventListener('change', function() {
+  if (departureOnly.checked) {
+    arrivalOnly.checked = false;
+    arrivalAndDeparture.checked = false;
+  }
+});
+
+arrivalAndDeparture.addEventListener('change', function() {
+  if (arrivalAndDeparture.checked) {
+    arrivalOnly.checked = false;
+    departureOnly.checked = false;
+  }
+});
+
+
+const NoOfficer = document.querySelector("#NoOfficer")
+const YesOfficer = document.querySelector("#YesOfficer")
+ 
+
+YesOfficer.addEventListener('change', function() {
+  if (YesOfficer.checked) {
+    document.querySelector(".officerType").style.display = "block";
+    NoOfficer.checked = false;
+  } else {
+    YesOfficer.checked = false;
+    document.querySelector(".officerType").style.display = "none";
+  }
+});
+ 
+NoOfficer.addEventListener('change', function() {
+  if (NoOfficer.checked) {
+    document.querySelector(".officerType").style.display = "none";
+    YesOfficer.checked = false;
+  } else {
+    NoOfficer.checked = false;
+    document.querySelector(".officerType").style.display = "block";
+  }
+});
+
+// Get the checkboxes
+const officerTypeCheckboxes = document.getElementsByName('officerType');
+
+// Function to validate the checkboxes and ensure only one can be checked
+function validateCheckbox(checkbox) {
+  if (checkbox.checked) {
+    // Uncheck other checkboxes in the group
+    officerTypeCheckboxes.forEach((cb) => {
+      if (cb !== checkbox) {
+        cb.checked = false;
+      }
+    });
+  }
+}
+
+function validateTshirtCheckbox(category, checkbox) {
+  const checkboxes = document.getElementsByName(category);
+  
+  checkboxes.forEach((cb) => {
+    if (cb !== checkbox) {
+      cb.checked = false;
+    }
+  });
+}
+
+
+// Function to calculate the cart
+function calculateCart() {
+  const escortPrice = 150;
+  const securityPrice = 0;
+  const tshirtPrice = 25;
+  const vatPrice = 10;
+  
+  // Get the selected options and input values
+  const peopleTravelling = document.querySelector('input[name="peopleTravelling"]:checked');
+  const transportOptions = document.querySelectorAll('input[name="transport"]:checked');
+  const officerType = document.querySelector('input[name="officerType"]:checked');
+  const queenSizeTshirts = document.querySelectorAll('input[name="QueenSize"]:checked');
+  const kingSizeTshirts = document.querySelectorAll('input[name="KingSize"]:checked');
+  
+  // Calculate the number of passengers
+  let numPassengers = 1;
+  if (peopleTravelling && peopleTravelling.value === "travellingAlone") {
+    const numPassengersInput = document.getElementById('travellingWithOthersNum');
+    numPassengers = parseInt(numPassengersInput.value) || 0;
+  }
+  
+  // Calculate the escort service price
+  const escortServicePrice = escortPrice * numPassengers;
+  
+  // Calculate the security price
+  const securityServicePrice = (officerType && officerType.value === "Private Officer") ? 50 : 70;
+  
+  // Calculate the t-shirt price
+  const queenSizeTshirtPrice = queenSizeTshirts.length * tshirtPrice;
+  const kingSizeTshirtPrice = kingSizeTshirts.length * tshirtPrice;
+  const tshirtTotalPrice = queenSizeTshirtPrice + kingSizeTshirtPrice;
+  
+  // Calculate the subtotal
+  const subtotal = escortServicePrice + securityServicePrice + tshirtTotalPrice;
+  
+  // Calculate the total price (subtotal + VAT)
+  const totalPrice = subtotal + vatPrice;
+  
+  // Update the cart input values
+  document.getElementById('EscortPrice').value = `$${escortServicePrice}`;
+  document.getElementById('SecurityPrice').value = `$${securityServicePrice}`;
+  document.getElementById('TshirtPrice').value = `$${tshirtTotalPrice}`;
+  document.getElementById('SubtotalPrice').value = `$${subtotal}`;
+  document.getElementById('TotalPrice').value = `$${totalPrice}`;
+}
+
+// Call the calculateCart function whenever there is a change in the form
+document.getElementById('form').addEventListener('change', calculateCart);
+    </script>
 </body>
 </html>

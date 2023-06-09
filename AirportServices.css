@@ -51,8 +51,19 @@ label:not(input[type=checkbox] ~ label) {
  .form {
     width: 80%;
     margin: 40px auto;
+}    
+
+
+.form input::not(input[type=checkbox]):focus {
+    background: transparent;
+    border-bottom: 1px solid black;
 }
 
+
+.form input:focus {
+    background: transparent;
+    border-bottom: 1px solid black;
+}
 
 .form input:not(input[type=checkbox]) {
     padding: 13px;
@@ -61,14 +72,15 @@ label:not(input[type=checkbox] ~ label) {
     border: none;
     background: #7e7e7e66;
     transition: 0.8s;
-    margin-bottom: 20px;
+    }
+
+    .error {
+        color: orange;
+        text-align: left;
+        margin-bottom: 20px;
+        display: none;
     }
     
-    
-    .form input:focus {
-        background: transparent;
-        border-bottom: 1px solid black;
-    }
 
     
 h2:not(.hero h2) {
@@ -78,6 +90,7 @@ h2:not(.hero h2) {
 
 p {
     text-align: center;
+    margin:40px 0px;
 }
 
 hr {
@@ -86,20 +99,28 @@ hr {
     height: 4px;
     border-radius: 4px;
     margin: 40px auto;
-    box-shadow: 0px 0px 10px #ffcf0dd6;
+    box-shadow: 0px 0px 20px #ffcf0dd6;
     border: none;
 }
 button[type=submit] {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: orange;
     border-radius: 15px;
     margin: 40px auto;
     border: none;
     display: block;
     width: fit-content;
-    box-shadow: 4px 4px 10px #cfa500d6;
+    box-shadow: inset 4px 4px 10px #cfa500d6;
     color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 0px 2px 4px rgb(92, 92, 92);
 
 
+}
+
+.officerType {
+    display: none;
+}
+
+#TShirts label {
+    margin-right: 20px ;
 }
