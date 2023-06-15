@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.hero {
+height: 40vh;
+background: url(images/voaBG.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+object-fit: cover;
+text-align: center;
+width: 100%;
+display: flex;
+}
+
+
+.header {
+width: 80%;
+margin: auto;
+color: white;
+font-size: 40px;
+text-shadow: 6px -2px 2px #36373562;
+}
+
+
+.welcome {
+    text-align: center;
+    font-weight: 700;
+    width: 90%;
+    border: 2px solid #fff;
+    margin: 40px auto;
+}
+
+label:not(input[type=checkbox] ~ label) {
+    display: block;
+    padding-bottom: 5px;
+}
+
+#signup {
+    padding: 20px;
+    width: 100%;
+}
+
+ .form {
+    width: 80%;
+    margin: 40px auto;
+}    
+
+label[for=travellingWithOthers] ~ input[type=number] {
+    width: max-content;
+    background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(0, 112, 7);
+}
+
+
+.form input[type=tel], input[type=time], input[type=date], input[type=email], input[type=text] {
+    padding: 13px;
+    width: 80vw;
+    outline: none;
+    border: none;
+    background: #7e7e7e66;
+    transition: 0.8s;
+    }
+
+    .form input:focus {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgb(0, 112, 7);
+    }
+
+    label[for=travellingWithOthers] {
+        display: inline;
+    }
+
+
+
+    .error {
+        color: rgb(9, 136, 0);
+        text-align: left;
+        margin-bottom: 20px;
+        display: none;
+    }
+    
+
+    
+h2:not(.hero h2) {
+    margin-bottom: 30px;
+    color:rgb(9, 136, 0);
+}
+
+hr {
+    background-color: rgb(9, 136, 0);
+    width: 90%;
+    height: 4px;
+    border-radius: 4px;
+    margin: 40px auto;
+    box-shadow: 0px 0px 20px #2f8700d6;
+    border: none;
+}

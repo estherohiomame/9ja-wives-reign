@@ -296,48 +296,7 @@ function validateTshirtCheckbox(category, checkbox) {
 
 // Function to calculate the cart
 function calculateCart() {
-  const escortPrice = 150;
-  const securityPrice = 0;
-  const tshirtPrice = 25;
-  const vatPrice = 10;
-  
-  // Get the selected options and input values
-  const peopleTravelling = document.querySelector('input[name="peopleTravelling"]:checked');
-  const transportOptions = document.querySelectorAll('input[name="transport"]:checked');
-  const officerType = document.querySelector('input[name="officerType"]:checked');
-  const queenSizeTshirts = document.querySelectorAll('input[name="QueenSize"]:checked');
-  const kingSizeTshirts = document.querySelectorAll('input[name="KingSize"]:checked');
-  
-  // Calculate the number of passengers
-  let numPassengers = 1;
-  if (peopleTravelling && peopleTravelling.value === "travellingAlone") {
-    const numPassengersInput = document.getElementById('travellingWithOthersNum');
-    numPassengers = parseInt(numPassengersInput.value) || 0;
-  }
-  
-  // Calculate the escort service price
-  const escortServicePrice = escortPrice * numPassengers;
-  
-  // Calculate the security price
-  const securityServicePrice = (officerType && officerType.value === "Private Officer") ? 50 : 70;
-  
-  // Calculate the t-shirt price
-  const queenSizeTshirtPrice = queenSizeTshirts.length * tshirtPrice;
-  const kingSizeTshirtPrice = kingSizeTshirts.length * tshirtPrice;
-  const tshirtTotalPrice = queenSizeTshirtPrice + kingSizeTshirtPrice;
-  
-  // Calculate the subtotal
-  const subtotal = escortServicePrice + securityServicePrice + tshirtTotalPrice;
-  
-  // Calculate the total price (subtotal + VAT)
-  const totalPrice = subtotal + vatPrice;
-  
-  // Update the cart input values
-  document.getElementById('EscortPrice').value = `$${escortServicePrice}`;
-  document.getElementById('SecurityPrice').value = `$${securityServicePrice}`;
-  document.getElementById('TshirtPrice').value = `$${tshirtTotalPrice}`;
-  document.getElementById('SubtotalPrice').value = `$${subtotal}`;
-  document.getElementById('TotalPrice').value = `$${totalPrice}`;
+  const peopleTravelling = document.querySelector("input[name=peopleTravelling]:checked")
 }
 
 // Call the calculateCart function whenever there is a change in the form

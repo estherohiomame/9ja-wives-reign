@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="VOAForm.css">
+</head>
+<body>
+        <section class="hero">
+            <div class="header">
+                <h2>Airport Services</h2>
+            </div>
+        </section>
+        <section class="welcome">
+            <hr>
+            <p>Hello from Nigeria!</p>
+            <p>So excited that you will be visiting Nigeria soon! Our goal  is to make your journey as smooth as possible. In order to process your application to receive your Fast Track Visa On Arrival (VOA), we need the following information. 
+                </p>
+            <hr>
+        </section>
+        <form action="" id="form">
+            <div class="form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" oninput="validateForm()" id="name">
+                <p class="error" id="nameVal">Please enter a name:</p>
+                <br><br>
+                
+    
+                <label for="phoneNum">Phone:</label>
+                <input type="tel" name="phoneNum" oninput="validateForm()" id="phoneNum">
+                <p class="error" id="numVal">Please enter a valid number</p><br><br>
+    
+                <label for="Email">Email Address:</label>
+                <input type="email" name="Email" oninput="validateForm()" id="Email">
+                <p class="error" id="emailVal">Please enter a valid email</p><br><br>    
+    
+                <label for="dateOfArrival">Date of Arrival</label>
+                <input type="date" name="dateOfArrival" oninput="validateForm()" id="dateOfArrival">
+                <p class="error" id="DOAVal">Enter a date of arrival</p><br><br>
+    
+                <label for="timeOfArrival">Expected Time of Arrival</label>
+                <input type="time" name="timeOfArrival" oninput="validateForm()" id="timeOfArrival">
+                <p class="error" id="ETAVal">Enter a expected time of arrival</p><br><br>
+    
+                <label for="Airline">Airline</label>
+                <input type="text" name="Airline" oninput="validateForm()" id="Airline">
+                <p class="error" id="AirlineVal">What's your mode of transport?</p><br><br>
+    
+                <label for="DateOfDeparture">Date of Departure</label>
+                <input type="text" name="DateOfDeparture" oninput="validateForm()" id="DateOfDeparture">
+                <p class="error" id="DODVal">When will you be leaving?</p>
+                <br><br>
+                
+                <br><br>
+            </div>
+            <div class="form">
+                <h2>Are others traveling with you?</h2>
+                <div class="peopleTravelling">
+                <input type="checkbox" oninput="validateAndUnselect()" value="travellingAlone" name="peopleTravelling" id="travellingAlone">
+                <label for="travellingAlone">No</label><br><br>
+                <input type="checkbox" name="peopleTravelling" oninput="validateAndUnselect()" value="travellingWithOthers" id="travellingWithOthers">
+                <label for="travellingWithOthers">Yes.  How many? </label>
+                <input type="number" name="numberOfPeopleTravelling" id="">
+                <br><br>
+                </div>
+
+                <p>Your VOA includes Airport Arrival. You will be assisted and escorted for the entire process. Do you want airport Escort for your departure?</p>
+                <br><input type="checkbox" name="AirportDeparture" id="AirportDeparture"  oninput="validateCheckbox(this)" value="Yes"><label for="AirportDeparture">Yes ($75)</label>
+                <br><input type="checkbox" name="AirportDeparture" id="AirportDeparture" oninput="validateCheckbox(this)" value="No"><label for="AirportDeparture">No</label>
+            </div>
+            <div class="form">
+                <h2>Arrival</h2>
+                <p>Will someone be in Nigeria to greet you at the airport? If yes, then please answer below. </p><br>
+                <label for="RelativeName">Relative Name</label>
+                <input type="text" name="RelativeName" id="RelativeName"><br><br>
+                <label for="RelativePhone">Relative Phone Number</label>
+                <input type="text" name="RelativePhone" id="RelativePhone">
+                <br><br><br>
+                <p>Emergency Contact in home country</p><br>
+                <label for="ContactName">Emergency Contact Name</label>
+                <input type="text" name="ContactName" id="ContactName"><br><br>
+                <label for="ContactPhone">Emergency Contact Phone Number</label>
+                <input type="text" name="ContactPhone" id="ContactPhone">
+                <br><br>
+            </div>
+            <div class="form">
+                <h2>Cart</h2>
+                <label for="VOAPrice">VOA $650p/p</label>
+            <input type="text" name="VOAPrice" id="VOAPrice" value="$650"><br><br>
+            <label for="AirportEscortPrice">Airport Escort/Departure</label>
+            <input type="text" name="AirportEscortPrice" id="AirportEscortPrice"><br><br>
+            <label for="VatPrice">VAT/Taxes</label>
+            <input type="text" name="EscortPrice" id="EscortPrice" value="$10" readonly><br><br>
+            <label for="SubtotalPrice">Subtotal</label>
+            <input type="text" name="SubtotalPrice" id="SubtotalPrice"><br><br>
+            <label for="DiscountCode">Discount Code</label>
+            <input type="text" name="DiscountCode" id="DiscountCode"><br><br>
+            <label for="DiscountAmount" class="discount">Discount Amount</label>
+            <input type="text" name="DiscountAmount" class="discount" id="DiscountAmount"><br><br>
+            <label for="TotalPrice">TOTAL</label>
+            <input type="text" name="TotalPrice" id="TotalPrice"><br><br><br><br>
+            <p><b>1. VOA is $650 usd if paid in full. </b></p>
+            <br>
+            <p><b>2. If you're making a security deposit of $100*. Then you can choose to divide the balance by 2 or 3 payments. Must be paid in full before 15days of your flight. </b></p>
+            
+            </div>
+
+            
+            </form>
+            <section class="welcome">
+                <h2>VOA PROCESS</h2>
+                <p>Once payment is received you will receive your receipt with your client number. You will need to use your client number to upload and email the following documents in order to process your VOA Approval Letter.</p>
+                <ol>
+                    <li>Copy of Passport Data Page</li>
+                    <li>Copy of your flight itinerary</li>
+                    <li>Passport Photo</li>
+                </ol>
+                <hr>
+            </section>
+
+            <section class="welcome">
+                <p>Once you've been approved, you'll receive a notification of your approval.  However, you will receive your official approval VOA letter from the Nigerian Embassy within 5 days of your flight. This is done in case there are any changes to your flight, since your letter will have your identifying flight information. </p>
+            </section>
+            <hr>
+            <section class="welcome">
+            <h2><b>IMPORTANT:</b></h2>
+            <p>You'll need this letter to board your plane. Once you arrive in Nigeria your Immigration Officer will greet you and then escort you to the Immigration Office to receive your Visa and Entry Stamp. Once you have your Visa you'll be escorted to retrieve your luggage and assisted through Customs. 
+                Your loved one will be waiting for you right outside of the Security Doors. 
+                </p>
+            </section>
+            <script>
+const AirportDeparture = document.querySelectorAll("#airportDeparture");
+
+function validateCheckbox(checkbox) {                
+    if (checkbox.checked) {
+                  // Uncheck other checkboxes in the group
+                  AirportDeparture.forEach((cb) => {
+                    if (cb !== checkbox) {
+                      cb.checked = false;
+                    }
+                  });
+                }
+              }
+                
+                    
+                    var nameInput = document.getElementById("name").value;
+var phoneInput = document.getElementById("phoneNum").value;
+var emailInput = document.getElementById("Email").value;
+var arrivalDateInput = document.getElementById("dateOfArrival").value;
+var arrivalTimeInput = document.getElementById("timeOfArrival").value;
+var airline = document.getElementById("Airline").value;
+var departureDateInput = document.getElementById("DateOfDeparture").value;
+var numberOfPeopleInput = document.getElementById("travellingWithOthers").checked ? document.getElementsByName("numberOfPeopleTravelling")[0].value : null;
+var airportDepartureInput = document.querySelector('input[name="AirportDeparture"]:checked') ? document.querySelector('input[name="AirportDeparture"]:checked').value : null;
+var relativeNameInput = document.getElementById("RelativeName").value;
+var relativePhoneInput = document.getElementById("RelativePhone").value;
+var emergencyContactNameInput = document.getElementById("ContactName").value;
+var emergencyContactPhoneInput = document.getElementById("ContactPhone").value;
+
+
+function validateForm() {
+              
+                // Validate Queen's Name
+                if (nameInput.trim() === '') {
+                  nameVal.style.display = 'block';
+                } else {
+                  nameVal.style.display = 'none';
+                }
+              
+                // Validate Phone Number
+                if (phoneInput.trim() === '') {
+                  numVal.style.display = 'block';
+                } else {
+                  numVal.style.display = 'none';
+                }
+              
+                // Validate Email Address
+                if (emailInput.trim() === '') {
+                  emailVal.style.display = 'block';
+                } else {
+                  emailVal.style.display = 'none';
+                }
+              
+                // Validate Date of Arrival
+                if (arrivalDateInput.trim() === '') {
+                  DOAVal.style.display = 'block';
+                } else {
+                  DOAVal.style.display = 'none';
+                }
+              
+                // Validate Expected Time of Arrival
+                if (arrivalTimeInput.trim() === '') {
+                  ETAVal.style.display = 'block';
+                } else {
+                  ETAVal.style.display = 'none';
+                }
+              
+                // Validate Airline
+                if (airline.trim() === '') {
+                  AirlineVal.style.display = 'block';
+                } else {
+                  AirlineVal.style.display = 'none';
+                }
+              
+                // Validate Date of Departure
+                if (departureDateInput.trim() === '') {
+                  DODVal.style.display = 'block';
+                } else {
+                  DODVal.style.display = 'none';
+                }
+              }
+              
+              
+              const travellingAlone = document.getElementById('travellingAlone');
+              const travellingWithOthers = document.getElementById('travellingWithOthers');
+              
+              travellingAlone.addEventListener('change', function() {
+                if (travellingAlone.checked) {
+                  travellingWithOthers.checked = false;
+                }
+              });
+              
+              travellingWithOthers.addEventListener('change', function() {
+                if (travellingWithOthers.checked) {
+                  travellingAlone.checked = false;
+                }
+              });
+              
+              const arrivalOnly = document.getElementById('arrivalOnly');
+              const departureOnly = document.getElementById('departureOnly');
+              const arrivalAndDeparture = document.getElementById('arrivalAndDeparture');
+              
+
+              
+              function validateTshirtCheckbox(category, checkbox) {
+                const checkboxes = document.getElementsByName(category);
+                
+                checkboxes.forEach((cb) => {
+                  if (cb !== checkbox) {
+                    cb.checked = false;
+                  }
+                });
+              }
+              
+              
+              // Function to calculate the cart
+              function calculateCart() {
+                const peopleTravelling = document.querySelector("input[name=peopleTravelling]:checked")
+              }
+              
+              // Call the calculateCart function whenever there is a change in the form
+              document.getElementById('form').addEventListener('change', calculateCart);
+                  </script>
+        </body>
+</html>
