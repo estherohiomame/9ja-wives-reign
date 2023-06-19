@@ -11,7 +11,7 @@ body {
 
 .hero {
 height: 40vh;
-background: url(images/voaBG.jpg);
+background: url(images/woman.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 object-fit: cover;
@@ -29,13 +29,27 @@ font-size: 40px;
 text-shadow: 6px -2px 2px #36373562;
 }
 
+.info {
+    position: relative;
+}
+
+.info > img {
+    position: absolute;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: brightness(20%);
+    z-index: -200;
+    height: max-content;
+}
+
+
 
 .welcome {
     text-align: center;
     font-weight: 700;
     width: 90%;
-    border: 2px solid #fff;
-    margin: 40px auto;
+    margin: 10px auto;
 }
 
 label:not(input[type=checkbox] ~ label) {
@@ -105,4 +119,29 @@ hr {
     margin: 40px auto;
     box-shadow: 0px 0px 20px #2f8700d6;
     border: none;
+}
+
+.down {
+    animation: expand 4s ease-in-out 0s 1 normal both;
+    max-height: 100%;
+}
+.drop {
+    transition: max-height 2s ease-in-out;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+
+@keyframes expand {
+    0% {
+        max-height: 0%
+    }
+
+    50% {
+        max-height: 40%;
+    }
+
+    100% {
+        max-height: 100%
+    }
 }

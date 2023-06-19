@@ -108,26 +108,27 @@
 
             
             </form>
-            <section class="welcome">
+            <section class="info">
+              <!-- <img src="images/VOABG2.jpg" alt=""> -->
+            <div class="welcome">
                 <h2>VOA PROCESS</h2>
+                <div class="dropdown drop">
                 <p>Once payment is received you will receive your receipt with your client number. You will need to use your client number to upload and email the following documents in order to process your VOA Approval Letter.</p>
                 <ol>
                     <li>Copy of Passport Data Page</li>
                     <li>Copy of your flight itinerary</li>
                     <li>Passport Photo</li>
                 </ol>
-                <hr>
-            </section>
-
-            <section class="welcome">
+                <br>
                 <p>Once you've been approved, you'll receive a notification of your approval.  However, you will receive your official approval VOA letter from the Nigerian Embassy within 5 days of your flight. This is done in case there are any changes to your flight, since your letter will have your identifying flight information. </p>
-            </section>
-            <hr>
-            <section class="welcome">
+              </div>     </div>
+            <div class="welcome">
             <h2><b>IMPORTANT:</b></h2>
+            <div class="dropdown drop">
             <p>You'll need this letter to board your plane. Once you arrive in Nigeria your Immigration Officer will greet you and then escort you to the Immigration Office to receive your Visa and Entry Stamp. Once you have your Visa you'll be escorted to retrieve your luggage and assisted through Customs. 
                 Your loved one will be waiting for you right outside of the Security Doors. 
                 </p>
+              </div></div>
             </section>
             <script>
 const AirportDeparture = document.querySelectorAll("#airportDeparture");
@@ -142,6 +143,17 @@ function validateCheckbox(checkbox) {
                   });
                 }
               }
+
+              const dropdownTriggers = document.querySelectorAll('.welcome');
+
+dropdownTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const dropdown = trigger.querySelector('.dropdown');
+
+    dropdown.classList.toggle('drop');
+    dropdown.classList.toggle('down');
+  });
+})
                 
                     
                     var nameInput = document.getElementById("name").value;
