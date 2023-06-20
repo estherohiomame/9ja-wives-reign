@@ -19,9 +19,17 @@ object-fit: cover;
 text-align: center;
 width: 100%;
 display: flex;
+position: relative;
 }
 
 
+
+.hero img {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
 .header {
 width: 80%;
 margin: auto;
