@@ -42,7 +42,7 @@ hr {
     color: white;
 }
 
-abel:not(input[type=checkbox] ~ label) {
+label:not(input[type=checkbox] ~ label) {
     display: block;
     padding-bottom: 5px;
 }
@@ -59,9 +59,13 @@ abel:not(input[type=checkbox] ~ label) {
 
 }    
 
+input[type=checkbox] {
+    margin:10px 0px;
+   
+}
+
 input[type=checkbox] ~ label {
-    display: inline-block;
-    padding: 10px 20px;
+    margin:10px 20px;
 }
 
 label[for=travellingWithOthers] ~ input[type=number] {
@@ -117,7 +121,7 @@ text-shadow: 6px -2px 2px #36373562;
     width: 120px;
     height: 40px;
     background: linear-gradient(to bottom right, #797979, #ffffff);
-    color: white;
+    color: black;
     border: none;
     border-radius: 40px;
     margin: 0 auto;
