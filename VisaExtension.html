@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Extension Form</title>
+    <link rel="stylesheet" href="VisaExtension.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="header">
+            <h2>Visa Extension</h2>
+        </div>
+        <img src="images/Metallic Line.png" alt="">
+    </section>
+    <section class="welcome">
+        <hr>
+        <p>DEAR VIP:</p>
+        <p>Thank you for the opportunity to allow us to make your visit to Nigeria as stress free as possible.  Please fill out the form below to extend your visa entry stamp. </p>
+        <hr>
+    </section>
+    <form action="" id="form">
+        <div class="form">
+            <label for="name">Name:</label>
+            <input type="text" name="name" oninput="validateForm()" id="name">
+            <p class="error" id="nameVal">Please enter a name:</p>
+            <br><br>
+            
+
+            <label for="phoneNum">Phone:</label>
+            <input type="tel" name="phoneNum" oninput="validateForm()" id="phoneNum">
+            <p class="error" id="numVal">Please enter a valid number</p><br><br>
+
+            <label for="Email">Email Address:</label>
+            <input type="email" name="Email" oninput="validateForm()" id="Email">
+            <p class="error" id="emailVal">Please enter a valid email</p><br><br>    
+
+            <label for="entryDate">Entry Date On Your Stamp</label>
+            <input type="date" name="entryDate" oninput="validateForm()" id="entryDate">
+            <p class="error" id="DOAVal">Enter a date of arrival</p><br><br>
+
+            <label for="DateOfDeparture">Date of Departure</label>
+            <input type="date" name="DateOfDeparture" oninput="validateForm()" id="DateOfDeparture">
+            <p class="error" id="DODVal">When will you be leaving?</p>
+            <br><br>
+            <br><br>
+
+            <p>How many months will you add to the date on your stamp?</p>
+            <input type="checkbox" name="monthsOfTravel" id="monthsOfTravel"  oninput="validateCheckbox(this)" value="OneMonths"><label for="monthsOfTravel">1 Month $150</label>
+            <br><input type="checkbox" name="monthsOfTravel" id="monthsOfTravel"  oninput="validateCheckbox(this)" value="TwoMonths"><label for="monthsOfTravel">Yes ($75)</label><br><br>
+
+            <p>Do you have Airport Escort for your Departure?</p>
+           <input type="checkbox" name="AirportEscort" id="AirportEscort"  oninput="validateCheckbox(this)" value="Yes"><label for="AirportEscort">1 Month $150</label>
+            <br><input type="checkbox" name="AirportEscort" id="AirportEscort"  oninput="validateCheckbox(this)" value="No"><label for="AirportEscort">Yes ($75)</label><br><br>
+
+            <p>Do you need transportation to the airport?</p>
+            <input type="checkbox" name="AirportTransport" value="No" id="AirportTransport"><label for="AirportTransport">No</label>
+            <br><input type="checkbox" name="AirportTransport" value="Yes" id="AirportTransport"><label for="AirportTransport">Yes, I need to be picked up and taken to airport. ($40)</label>
+            <br><input type="checkbox" name="AirportTransport" value="Yes+Departure" id="AirportTransport"><label for="AirportTransport">Yes, we need to be picked up and taken to the airport. Also for the driver to wait at the airport, so he can also take my partner back to their accommodations. ($75).</label>
+        </div>
+        <div class="form">
+            <label for="StampExtensionTotal">Stamp Extension Total</label>
+        <input type="text" name="StampExtensionTotal" id="StampExtensionTotal" value="$650"><br><br>
+        <label for="AirportEscortPrice">Airport Escort Total</label>
+        <input type="text" name="AirportEscortPrice" id="AirportEscortPrice"><br><br>
+        <label for="TransportationTotal">Transportation Total</label>
+ 
+        <input type="text" name="TransportationTotal" id="TransportationTotal" value="$10" readonly><br><br>
+        <label for="HandlingPrice">Handling Fee</label>
+        <input type="text" name="HandlingPrice" id="HandlingPrice" value="$8"><br><br>
+        
+        <label for="Subtotal">Subtotal</label>
+        <input type="text" name="Subtotal" class="Subtotal" id="Subtotal"><br><br>
+        <label for="DiscountCode" class="discount">Discount Code</label>
+        <input type="text" name="DiscountCode" id="DiscountCode"><br><br>
+        <label for="TotalPrice">TOTAL</label>
+        <input type="text" name="TotalPrice" id="TotalPrice"><br><br>
+        <button class="submit">Check Out Now</button><br><br><br><br>
+        </div>                
+    
+    </form>
+</body>
+</html>
