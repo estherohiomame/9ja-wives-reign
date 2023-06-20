@@ -7,6 +7,7 @@
 body {
     font-family: sans-serif;
     width: 100%;
+    font-size: 19px;
 }
 
 .hero {
@@ -27,6 +28,22 @@ margin: auto;
 color: white;
 font-size: 40px;
 text-shadow: 6px -2px 2px #36373562;
+}
+
+.submit {
+     width: 120px;
+     height: 40px;
+     background: linear-gradient(to bottom,#153d00, #44ff00);
+     color: white;
+     border: none;
+     border-radius: 40px;
+     margin: 0 auto;
+     display: block;
+}
+
+.submit:hover {
+    background: linear-gradient(to bottom, #44ff00, #153d00);
+
 }
 
 .info {
