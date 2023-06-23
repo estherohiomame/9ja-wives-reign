@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigerian Weddings</title>
     <link rel="stylesheet" href="NigerianWeddings.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <section class="hero">
-        <h1 class="header">Nigerian Weddings</h3>
+        <h1 class="header animate__animated animate__delay-2s animate__fadeIn">Nigerian Weddings</h3>
     </section>
     <section>
         <hr class="long">
     </section>
-    <section class="welcome">
+    <section class="welcome" data-aos="fade-up">
         <p><b>Congratulations</b> on your recent Engagement! Being married in the MOTHERLAND as an Intercultural Couple is a beautiful accomplishment on its own. How many from your neighborhood can say they have done what you're about to do?!! It's Our honor and goal to help make this Once-In-A-Lifetime Occasion even greater.</p>
     </section>
     <hr class="short">
     <section>
-        <h2 class="heading">We offer several wedding packages to choose from. Please make your selections below and one of our Wedding Specialists will reach out to you.</h2>
+        <h2 class="heading" data-aos="fade-left">We offer several wedding packages to choose from. Please make your selections below and one of our Wedding Specialists will reach out to you.</h2>
     </section>
 
     <form action="" id="form">
-        <div class="form">
+        <div class="form" data-aos="zoom-in">
             <label for="name">Name:</label>
             <input type="text" name="name" oninput="validateForm()" id="name">
             <p class="error" id="nameVal">Please enter a name:</p>
@@ -59,22 +64,24 @@
             </ul>
         </div>
         <hr class="thin">
-        <div class="form">
-            <label for="VIPCourtMarriage" class="choice-label">TGW VIP SPECIAL COURT MARRIAGE</label>
+        <div class="form"data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <label for="VIPCourtMarriage" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="choice-label">TGW VIP SPECIAL COURT MARRIAGE</label>
             <input type="radio" class="wedding-option" name="VIPCourtMarriage" id="VIPCourtMarriage" value="TGW VIP SPECIAL COURT MARRIAGE">
 
             <h4>$850 USD</h4><br>
+            <img src="images/courtMarriage.jpg" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" alt="">
             <p>Price includes Federal Registry, Federal Officiant, Makeup Artist, Photographer, Videographer and Personalized video keepsake, Photos, Personalized Photo Album, Certificate Holder, Bouquet and/or fan, and African Drummer. </p>
             <br><p>Guests over 20 is additional cost.</p>
             <br><p>Conducted on Mondays only.</p>
             <br><ul><li>Dinner Options following ceremony is additional cost.</li></ul>
         </div>
         <hr class="thin">
-        <div class="form">
+        <div class="form" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <label for="VIPCourtMarriage" class="choice-label">TGW VIP FEDERAL REGISTRY BEACH WEDDING</label>
             <input type="radio" class="wedding-option" name="VIPCourtMarriage" id="VIPCourtMarriage" value="TGW VIP SPECIAL COURT MARRIAGE">
 
             <h4>$3999 USD</h4><br>
+            <img src="images/beachWedding.jpg" alt="">
             <p>Price includes Beach Venue, urnishings and decor, 
 
                 ederal Registry, ederal Officiant, 
@@ -92,11 +99,13 @@
                 <li>Guests over 60 and special request menu items is additional cost.</li>
             </ul>
         </div>
-        <div class="form">
+        <hr class="thin" id="green">
+        <div class="form" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <label for="VIPCourtMarriage" class="choice-label">TGW VIP FEDERAL REGISTRY RECEPTION HALL WEDDING</label>
             <input type="radio" class="wedding-option" name="VIPCourtMarriage" id="VIPCourtMarriage" value="TGW VIP SPECIAL COURT MARRIAGE">
 
             <h4>$4400 USD</h4><br>
+            <img src="images/receptionhallwedding.jpg" alt="">
             <p>Price includes Venue, Registry, Federal Officiant, Federal Registry Banner, Décor, Makeup Artist, Photographer, Videographer and Personalized video keepsake, Photos, Photo Album, Certificate Holder, Bouquet and/or an, and African Drummer.</p>
             <ul>
                 <li> Dinner Options following ceremony is additional cost which includes dinner buffet, drinks and wedding cake.</li>
@@ -108,6 +117,7 @@
             <label for="VIPCourtMarriage" class="choice-label">TGW VIP TRADITIONAL MARRIAGE</label>
             <input type="radio" class="wedding-option" name="VIPCourtMarriage" id="VIPCourtMarriage" value="TGW VIP SPECIAL COURT MARRIAGE">
             <h4>$8950 USD</h4><br>
+            <img src="images/traditional_wedding.jpg" alt="">
 
             <p>Price includes Venue, Décor, DJ, Native Wine, 
 
@@ -139,7 +149,7 @@
         <hr class="thin" id="black">
         <h3>PLEASE CUSTOMIZE YOUR PACKAGE BY SELECTING YOUR CHOICES BELOW:</h3>
 
-        <div class="form" id="customize">
+        <div class="form" id="customize" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <p>1. City and State of Wedding?</p>
             <input type="text" name="WeddingLocation" id="WeddingLocation">
 <br><br>
@@ -156,8 +166,29 @@
             <label for="color2">Second Color</label><input type="text" name="color2" id="color2"><br>
             <br><br>
             <p>5. If you need Witnesses, please select which one(s). Additional cost $250 each. Skip, if this don t apply.</p>
-
+            <input type="radio" name="WitnessOptions" id="BrideWitness" value="BrideWitness"><label for="WitnessOptions">Yes, Bride's Witness</label>
+            <br>
+            <input type="radio" name="WitnessOptions" id="GroomWitness" value="GroomWitness"><label for="WitnessOptions">Yes, Groom's Witness</label>
+<br><br>
+            <p>8. Check Which Services you ll need assistance with(additional costs). </p>
+            <input type="checkbox" name="Accomodations" id=""><label for="Accomodations">Accommodations</label><br>
+            <input type="checkbox" name="BankingServices" id=""><label for="BankingServices">Banking Services</label><br>
+            <input type="checkbox" name="" id="HairStylist"><label for="HairStylist">Hair Stylist</label><br>
+            <input type="checkbox" name="" id="Security"><label for="Security">Security</label><br>
+            <input type="checkbox" name="" id="Transportation"><label for="Transportation">Transportation</label><br>
+            <input type="checkbox" name="" id="VisaServices"><label for="VisaServices">Visa Services</label><br>
+            <input type="checkbox" name="" id="WeddingAttire"><label for="WeddingAttire">Wedding Attire</label><br>
+            <input type="checkbox" name="" id="WeddingReception"><label for="WeddingReception">WeddingReception</label><br>
+            <input type="checkbox" name="" id="WeddingRings"><label for="WeddingRings">Wedding Rings</label><br>
+            <br><br>
+            <p>7. Any special requests?</p>
+            <textarea name="SpecialRequests" id="" cols="30" rows="20"></textarea>
         </div>
+        <p class="footer">Thank you! Our Wedding Specialist will be in contact with you soon.</p>
     </form>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

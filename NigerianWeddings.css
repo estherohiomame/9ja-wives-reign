@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Gluten:wght@700&family=Montserrat:wght@100;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -60,7 +62,7 @@ label[for=travellingWithOthers] ~ input[type=number] {
 
 
 
-.form input[type=tel], input[type=time], input[type=date], input[type=email], input[type=text] {
+.form input[type=tel], input[type=time], input[type=date], textarea, input[type=email], input[type=text] {
     padding: 13px;
     width: 80vw;
     outline: none;
@@ -84,9 +86,11 @@ label[for=travellingWithOthers] ~ input[type=number] {
 .header {
     width: 80%;
     margin: auto;
-    color: white;
-    font-size: 50px;
-    text-shadow: 6px 7px 7px #00000095;
+    color: gold;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: -2px -2px 2px #77777732;
     }
 
     .heading {
@@ -151,15 +155,26 @@ label[for=travellingWithOthers] ~ input[type=number] {
 
       }
 
-      #customize input{
+      #customize input:not(input[type=radio]):not(input[type=checkbox]), #customize textarea {
         background-color: rgb(252, 252, 252);
         width: 100%;
+        border: none;
       }
 
       #customize label {
-        display: inline-block;
+        display: inline;
         margin-right: 20px;
       }
+
+      #customize input[type=radio], #customize input[type=checkbox] {
+        margin-right: 20px;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 20px;
+        display: inline;
+      }
+
+      
     hr.thin {
         background-color: gold;
         height: 2px;
@@ -171,4 +186,20 @@ label[for=travellingWithOthers] ~ input[type=number] {
     li {
         font-weight: 500;
         padding-bottom: 10px;
+    }
+
+    .form img {
+        display: block;
+        width: 90%;
+        object-fit: cover;
+        height: 300px;
+        margin: 40px auto;
+    }
+
+    .footer {
+        text-align: center;
+        width: 70%;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 40px auto;
     }
