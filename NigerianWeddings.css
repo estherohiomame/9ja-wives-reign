@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    font-size: 22px;
+}
+
+.hero {
+height: 50vh;
+background: linear-gradient(to right, rgb(2, 11, 2), rgb(13, 83, 19), rgb(2, 11, 2));
+
+text-align: center;
+width: 100%;
+display: flex;
+position: relative;
+}
+
+hr.long {
+    background-color: gold;
+    width: 100%;
+    height: 9px;
+    border-radius: 4px;
+    margin: 30px auto;
+    box-shadow: 0px 0px 20px rgba(255, 236, 126, 0.428);
+    border: none;
+}
+
+hr.short {
+    background-color: gold;
+    width: 20%;
+    height: 3px;
+    border-radius: 4px;
+    margin: 10px 50px;
+    box-shadow: 0px 0px 20px rgba(255, 236, 126, 0.428);
+    border: none;
+}
+
+label[for=travellingWithOthers] ~ input[type=number] {
+    width: max-content;
+    background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(0, 112, 7);
+}
+
+.error {
+    display: none;
+}
+
+
+.form {
+    width: 80%;
+    margin: 40px auto;
+}    
+
+
+
+.form input[type=tel], input[type=time], input[type=date], input[type=email], input[type=text] {
+    padding: 13px;
+    width: 80vw;
+    outline: none;
+    border: none;
+    background: #7e7e7e66;
+    transition: 0.8s;
+    }
+
+    .form input:focus {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid gold;
+    }
+
+.welcome {
+    text-align: justify;
+    margin: 50px;
+
+}
+
+.header {
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-size: 50px;
+    text-shadow: 6px 7px 7px #00000095;
+    }
+
+    .heading {
+        color: rgb(5, 52, 5);
+        font-weight: 700;
+        font-size: 22;
+        margin: 50px;
+    }
+
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        margin: 40px 0px;
+        font-size: 28px;
+    }
+
+    .choice-label {
+        font-weight: bold;
+        margin: 0px 0px 20px;
+        font-size: 23px;
+        display: inline-block;
+    }
+
+    hr#black {
+        background-color: black;
+    }
+
+    .description p {
+        width: 80%;
+        padding: 15px 30px;
+        background-color: rgb(1, 40, 18);
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 29px;
+    }
+
+    hr#green {
+        background-color: green;
+    }
+
+    .wedding-option {
+            vertical-align: middle;
+            float: right;
+            margin-left: 5px;
+            width: 30px;
+            height: 30px;
+            accent-color: green;
+      }
+
+
+
+      #customize {
+        background-color: rgb(211, 211, 211);
+        padding: 40px 30px;
+      }
+
+      #customize p {
+        color: darkgreen;
+        font-weight: bold;
+        margin: 20px 0px;
+
+      }
+
+      #customize input{
+        background-color: rgb(252, 252, 252);
+        width: 100%;
+      }
+
+      #customize label {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    hr.thin {
+        background-color: gold;
+        height: 2px;
+        width: 80%;
+        margin: 40px auto;
+        border: none;
+    }
+
+    li {
+        font-weight: 500;
+        padding-bottom: 10px;
+    }
