@@ -21,7 +21,10 @@ body {
 .hero {
 height: 60vh;
 background: url("images/weddingBG.jpg")/* linear-gradient(to right, rgb(2, 11, 2), rgb(13, 83, 19), rgb(2, 11, 2))*/; 
-
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 40% 100%;
 text-align: center;
 width: 100%;
 display: flex;
@@ -103,7 +106,7 @@ label[for=travellingWithOthers] ~ input[type=number] {
     font-size: 70px;
     font-weight: bold;
     font-family: 'Alex-Brush', cursive;
-    text-shadow: -2px -2px 2px #77777732;
+    text-shadow: 4px 4px 4px #77777732;
     }
 
     .heading {
