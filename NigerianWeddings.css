@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Gluten:wght@700&family=Montserrat:wght@100;400&display=swap');
 
+@font-face {
+  font-family: Alex-Brush;
+  src: url("images/AlexBrush-Regular.ttf");
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +19,8 @@ body {
 }
 
 .hero {
-height: 50vh;
-background: linear-gradient(to right, rgb(2, 11, 2), rgb(13, 83, 19), rgb(2, 11, 2));
+height: 60vh;
+background: url("images/weddingBG.jpg")/* linear-gradient(to right, rgb(2, 11, 2), rgb(13, 83, 19), rgb(2, 11, 2))*/; 
 
 text-align: center;
 width: 100%;
@@ -66,9 +72,16 @@ label[for=travellingWithOthers] ~ input[type=number] {
     padding: 13px;
     width: 80vw;
     outline: none;
-    border: none;
     background: #7e7e7e66;
     transition: 0.8s;
+    }
+
+    #gold {
+        background-color: gold;
+        padding: 20px 50px;
+        border-radius: 20px;
+        color: white;
+        text-shadow: 2px 2px 2px black;
     }
 
     .form input:focus {
@@ -78,7 +91,7 @@ label[for=travellingWithOthers] ~ input[type=number] {
     }
 
 .welcome {
-    text-align: justify;
+    text-align: left;
     margin: 50px;
 
 }
@@ -89,15 +102,30 @@ label[for=travellingWithOthers] ~ input[type=number] {
     color: gold;
     font-size: 70px;
     font-weight: bold;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Alex-Brush', cursive;
     text-shadow: -2px -2px 2px #77777732;
     }
 
     .heading {
         color: rgb(5, 52, 5);
         font-weight: 700;
-        font-size: 22;
+        font-size: 28px;
         margin: 50px;
+        text-align: center;
+    }
+
+    #first {
+        background-color: darkgreen;
+        color: white;
+        padding: 40px 0px;
+    }
+
+    #first input {
+        color: white;
+    }
+
+    #first label {
+        text-transform: uppercase;
     }
 
     h3 {
@@ -164,6 +192,11 @@ label[for=travellingWithOthers] ~ input[type=number] {
       #customize label {
         display: inline;
         margin-right: 20px;
+        font-size: 18px;
+      }
+
+      #cart input {
+        border: none;
       }
 
       #customize input[type=radio], #customize input[type=checkbox] {

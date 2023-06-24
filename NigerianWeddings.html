@@ -27,6 +27,7 @@
     </section>
 
     <form action="" id="form">
+        <div class="first" id="first">
         <div class="form" data-aos="zoom-in">
             <label for="name">Name:</label>
             <input type="text" name="name" oninput="validateForm()" id="name">
@@ -51,9 +52,9 @@
             <br><br>
             
             <br><br>
-        </div>
+        </div></div>
         <hr class="thin">
-        <div class="form">
+        <div class="form" id="gold">
             <h3>Why choose a TGW Special Court Marriage?</h3>
             <ul>
                 <li>Short Wait Times!</li>
@@ -68,9 +69,21 @@
             <label for="VIPCourtMarriage" class="choice-label">TGW VIP SPECIAL COURT MARRIAGE</label>
             <input type="radio" class="wedding-option" name="VIPCourtMarriage" id="VIPCourtMarriage" value="TGW VIP SPECIAL COURT MARRIAGE">
 
-            <h4>$850 USD</h4><br>
+            <h4>$850 USD</h4>
             <img src="images/courtMarriage.jpg" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" alt="">
-            <p>Price includes Federal Registry, Federal Officiant, Makeup Artist, Photographer, Videographer and Personalized video keepsake, Photos, Personalized Photo Album, Certificate Holder, Bouquet and/or fan, and African Drummer. </p>
+            <p>PRICE INCLUDES: </p>
+            <ul><li>Federal Registration</li>
+            <li>Federal Officiant
+            </li>
+            <li>Makeup Artist</li>
+            <li>Photographer</li>
+            <li>Videographer</li>
+            <li>Personalized Wedding Video Keepsake</li>
+            <li>Wedding Photo Album</li>
+            <li>Certificate Holder</li>
+            <li>Bouquet or Traditional Fan</li>
+            <li>African Drummer</li>
+        </ul>
             <br><p>Guests over 20 is additional cost.</p>
             <br><p>Conducted on Mondays only.</p>
             <br><ul><li>Dinner Options following ceremony is additional cost.</li></ul>
@@ -80,19 +93,21 @@
             <label for="VIPCourtMarriage" class="choice-label">TGW VIP FEDERAL REGISTRY BEACH WEDDING</label>
             <input type="radio" class="wedding-option" name="VIPCourtMarriage" id="VIPCourtMarriage" value="TGW VIP SPECIAL COURT MARRIAGE">
 
-            <h4>$3999 USD</h4><br>
+            <h4>$3999 USD</h4>
             <img src="images/beachWedding.jpg" alt="">
-            <p>Price includes Beach Venue, urnishings and decor, 
-
-                ederal Registry, ederal Officiant, 
-                
-                ederal Registry Banner, Makeup Artist, Photographer, 
-                
-                Videographer and Personalized video keepsake, Photos, 
-                
-                Personalized Photo Album, Certificate Holder, Bouquet 
-                
-                and/or an, and African Drummer.</p>
+            <p>PRICE INCLUDES: </p>
+            <ul><li>Federal Registration</li>
+            <li>Federal Officiant
+            </li>
+            <li>Makeup Artist</li>
+            <li>Photographer</li>
+            <li>Videographer</li>
+            <li>Personalized Wedding Video Keepsake</li>
+            <li>Wedding Photo Album</li>
+            <li>Certificate Holder</li>
+            <li>Bouquet or Traditional Fan</li>
+            <li>African Drummer</li>
+        </ul>
             <br>
             <ul>
                 <li>Dinner Options following ceremony is additional cost, which includes dinner buffet, drinks and wedding cake.</li>
@@ -106,7 +121,19 @@
 
             <h4>$4400 USD</h4><br>
             <img src="images/receptionhallwedding.jpg" alt="">
-            <p>Price includes Venue, Registry, Federal Officiant, Federal Registry Banner, Décor, Makeup Artist, Photographer, Videographer and Personalized video keepsake, Photos, Photo Album, Certificate Holder, Bouquet and/or an, and African Drummer.</p>
+            <p>PRICE INCLUDES: </p>
+            <ul><li>Federal Registration</li>
+            <li>Federal Officiant
+            </li>
+            <li>Makeup Artist</li>
+            <li>Photographer</li>
+            <li>Videographer</li>
+            <li>Personalized Wedding Video Keepsake</li>
+            <li>Wedding Photo Album</li>
+            <li>Certificate Holder</li>
+            <li>Bouquet or Traditional Fan</li>
+            <li>African Drummer</li>
+        </ul>
             <ul>
                 <li> Dinner Options following ceremony is additional cost which includes dinner buffet, drinks and wedding cake.</li>
                 <li>*Guests over 80 and special request menu items iss additional cost.</li>
@@ -119,15 +146,19 @@
             <h4>$8950 USD</h4><br>
             <img src="images/traditional_wedding.jpg" alt="">
 
-            <p>Price includes Venue, Décor, DJ, Native Wine, 
-
-                Makeup Artist, Photographer, Videographer, Photos, 
-                
-                Personalized Photo Album, Bouquet and/or an, and 
-                
-                Cultural Drummer, as well as both foreign and local foods 
-                
-                and wedding cake.</p>
+            <p>PRICE INCLUDES: </p>
+            <ul><li>Federal Registration</li>
+            <li>Federal Officiant
+            </li>
+            <li>Makeup Artist</li>
+            <li>Photographer</li>
+            <li>Videographer</li>
+            <li>Personalized Wedding Video Keepsake</li>
+            <li>Wedding Photo Album</li>
+            <li>Certificate Holder</li>
+            <li>Bouquet or Traditional Fan</li>
+            <li>African Drummer</li>
+        </ul>
                 <br><ul><li>Dinner Options following ceremony is additional cost.</li></ul>
         </div>
         <hr class="thin" id="green">
@@ -166,9 +197,9 @@
             <label for="color2">Second Color</label><input type="text" name="color2" id="color2"><br>
             <br><br>
             <p>5. If you need Witnesses, please select which one(s). Additional cost $250 each. Skip, if this don t apply.</p>
-            <input type="radio" name="WitnessOptions" id="BrideWitness" value="BrideWitness"><label for="WitnessOptions">Yes, Bride's Witness</label>
+            <input type="checkbox" name="BrideWitness" id="BrideWitness" value="BrideWitness"><label for="WitnessOptions">Yes, Bride's Witness</label>
             <br>
-            <input type="radio" name="WitnessOptions" id="GroomWitness" value="GroomWitness"><label for="WitnessOptions">Yes, Groom's Witness</label>
+            <input type="checkbox" name="GroomWitness" id="GroomWitness" value="GroomWitness"><label for="WitnessOptions">Yes, Groom's Witness</label>
 <br><br>
             <p>8. Check Which Services you ll need assistance with(additional costs). </p>
             <input type="checkbox" name="Accomodations" id=""><label for="Accomodations">Accommodations</label><br>
@@ -184,7 +215,22 @@
             <p>7. Any special requests?</p>
             <textarea name="SpecialRequests" id="" cols="30" rows="20"></textarea>
         </div>
-        <p class="footer">Thank you! Our Wedding Specialist will be in contact with you soon.</p>
+    <hr class="thin" id="green">
+    <div class="form" id="cart">
+        <h3>CART</h3>
+        <label for="MarriagePrice">Marriage Venue</label>
+            <input type="text" name="MarriagePrice" id="MarriagePrice"><br><br>
+            <label for="VatPrice">VAT/Taxes</label>
+            <input type="text" name="EscortPrice" id="EscortPrice" value="$10" readonly><br><br>
+            <label for="SubtotalPrice">Subtotal</label>
+            <input type="text" name="SubtotalPrice" id="SubtotalPrice"><br><br>
+            <label for="DiscountCode">Discount Code</label>
+            <input type="text" name="DiscountCode" id="DiscountCode"><br><br>
+            <label for="DiscountAmount" class="discount">Discount Amount</label>
+            <input type="text" name="DiscountAmount" class="discount" id="DiscountAmount"><br><br>
+            <label for="TotalPrice">TOTAL</label>
+            <input type="text" name="TotalPrice" id="TotalPrice"><br><br><br>
+    </div>
     </form>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
