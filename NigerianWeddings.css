@@ -112,7 +112,7 @@ label[for=travellingWithOthers] ~ input[type=number] {
     .heading {
         color: rgb(5, 52, 5);
         font-weight: 700;
-        font-size: 28px;
+        font-size: 23px;
         margin: 50px;
         text-align: center;
     }
@@ -230,6 +230,9 @@ label[for=travellingWithOthers] ~ input[type=number] {
         object-fit: cover;
         height: 300px;
         margin: 40px auto;
+        border: 9px solid;
+        border-image: linear-gradient(to top right, gold, rgb(205, 195, 0));
+        border-image-width: 100%;
     }
 
     .footer {
