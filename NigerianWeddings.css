@@ -231,7 +231,7 @@ label[for=travellingWithOthers] ~ input[type=number] {
         height: 300px;
         margin: 40px auto;
         border: 9px solid;
-        border-image: linear-gradient(to top right, gold, rgb(205, 195, 0));
+        border-image: linear-gradient(to top right, gold, rgb(193, 174, 0));
         border-image-width: 100%;
     }
 
@@ -241,4 +241,18 @@ label[for=travellingWithOthers] ~ input[type=number] {
         font-size: 22px;
         font-weight: bold;
         margin: 40px auto;
+    }
+
+
+    button[type=submit] {
+        width: 120px;
+        display: block;
+        margin: 30px auto;
+        padding: 20px 0px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        text-shadow: 2px 2px 3px black;
+        font-size: 18px;
+        background: linear-gradient(to top right, gold, rgb(141, 108, 0), gold);
     }
